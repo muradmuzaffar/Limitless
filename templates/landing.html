@@ -1,17 +1,54 @@
 <!DOCTYPE html>
-{% load static  %}
+{%load static%}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{%static 'css/landing.css' %}">
-
-    <title>Document</title>
+    <link rel="stylesheet" href="{%static 'css/main.min.css'%}">
+    <link rel="stylesheet" href="{%static 'css/style.css'%}">
+    <title>Limitless</title>
 </head>
 <body>
+<!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container">
+        <!-- Logo -->
+        <a href="#" class="navbar-brand">
+          <img src="{%static 'images/limitless_logo-01 4.png'%}" alt="" width="100%" height="100%">
+        </a>
+        <!-- Toggler -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+               <span class="navbar-toggler-icon"></span>
+            </button>
 
-    <h1>Landing</h1>
-    
+        <!-- nav items -->
+       <div class="collapse navbar-collapse" id="navmenu">
+           <ul class="navbar-nav ms-auto">
+               <li class="nav-item">
+                   <a href="#" class="nav-link text-dark">Mağaza</a>
+               </li>
+               <li class="nav-item">
+                   <a href="#" class="nav-link text-dark">Bloqlar</a>
+               </li>
+               <li class="nav-item">
+                   <a href="#" class="nav-link text-dark">İş elanları</a>
+               </li>
+               <li class="nav-item">
+                <a href="#" class="nav-link text-dark">Haqqımızda</a>
+               </li>
+               <li class="nav-item login">
+                  <a href="#" class="nav-link text-light ">Daxil ol</a>
+               </li>
+               
+           </ul>
+       </div>
+       </div>
+      </nav>
+<!-- navbar end -->
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>

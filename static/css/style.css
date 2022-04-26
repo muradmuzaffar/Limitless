@@ -1,0 +1,20 @@
+.nav-item {
+    margin-left: 6.5em;
+}
+
+.nav-link {
+    font-size: large;
+}
+
+
+.login {
+    background-color: #FEB449;
+    border-radius: 30px;
+    justify-content: center; 
+    padding: 0 2em 0 2em;
+}
+
+.login :hover {
+    background-color: #f5a330;
+}
+

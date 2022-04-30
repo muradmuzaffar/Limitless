@@ -1,16 +1,13 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
 }
-
+/* NAVBAR CSS */
 .nav-item {
     margin-left: 6.5em;
 }
-
 .nav-link {
     font-size: large;
 }
-
-
 .login {
     background-color: #FEB449;
     border-radius: 30px;
@@ -19,7 +16,6 @@ body {
     color: white;
     margin-top: 5px;
 }
-
 .login:hover {
     background-color: whitesmoke;
     color: #FEB449;
@@ -27,30 +23,47 @@ body {
 }
 
 /* FORM CUSTOM CSS */
-form {
- 
+#section-form {
+    display: flex;
+}
+h3 {
+    font-family: 'gilroy-extrabold';
+    color: #4E4F4F;
+    
 }
 input[type=text], input[type=email], select, textarea {
    border: 1px solid #53AFBE;
    border-radius: 30px;
    box-sizing: border-box;
    margin: 10px 20px 10px 0;
-   padding: 5px 10px 5px 20px;
+   padding: 5px 9px 5px 20px;
   }
-  
+textarea {
+    width: 96%;
+    height: 150px;
+    border-radius: 18px;
+}
 input[type=submit] {
-    display: inline-block;
-  }
-  
+    background-color: #53AFBE;
+    border-radius: 30px;
+    justify-content: center; 
+    padding: 0.3em 2em 0.3em 2em;
+    color: white;
+    margin-top: 5px;
+} 
 input[type=submit]:hover {
-   
-  }
-  
+    background-color: whitesmoke;
+    color: #53AFBE;
+    border: 1px solid #53AFBE;
+}  
+#muraciet {
+ padding-right: 5rem;
+}
 .form-container {
-    
+    margin: 7% 0 0 13%;
 
-  }
-  
-#fname {
-    
-  }
+}
+form {
+    position: absolute;
+    margin-top: 72px;
+}

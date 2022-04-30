@@ -32,7 +32,7 @@ body {
     font-size: 30px;
     max-width: 500px;
 }
-hr {
+.hr-qisa {
     width: 60%;
     margin: auto;
     padding: 1px;
@@ -45,8 +45,7 @@ hr {
 h3 {
     font-family: 'gilroy-extrabold', Arial, sans-serif;
     color: #4E4F4F;
-    font-size: 51px;
-    
+    font-size: 50px;
 }
 input[type=text], input[type=email], select, textarea {
    border: 1px solid #53AFBE;
@@ -75,13 +74,11 @@ input[type=submit]:hover {
 }  
 #muraciet {
  padding-right: 5rem;
+ color: #8E8E8E;
 }
-#muraciet-text{
-    color: red;
-}
+
 .form-container {
     margin: 7% 0 0 13%;
-
 }
 form {
     margin-top: 72px;
@@ -89,4 +86,28 @@ form {
 
 .kompluqaqas {
     margin: 70px 0 0;
+}
+/* Footer CSS */
+.hr-uzun {
+    width: 70%;
+    margin: auto;
+    padding: 1px;
+}
+h4 {
+    font-family: Arial, sans-serif;
+    color: #4E4F4F;
+    font-size: 20px;
+    font-weight: 600;
+}
+.footer-container {
+    display: flex;
+    margin: 2% 0 0 13%;
+}
+.footer-list {
+    list-style-type: none;
+    color: #4E4F4F
+}
+
+.ficon {
+    margin: 0 20px 0 0;
 }

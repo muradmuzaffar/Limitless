@@ -37,8 +37,11 @@
                <li class="nav-item">
                 <a href="#" class="nav-link text-dark">Haqqımızda</a>
                </li>
-               <li class="nav-item login">
-                  <a href="#" class="nav-link text-light ">Daxil ol</a>
+               <li class="nav-item">
+                <button class="btn login">
+                      Daxil ol
+                </button>
+                  <!-- <a href="#" class="nav-link text-light ">Daxil ol</a> -->
                </li>
                
            </ul>
@@ -46,6 +49,32 @@
        </div>
       </nav>
 <!-- navbar end -->
+<!-- Forum Start -->
+<h3>Bizimlə Əlaqə yarat.</h3>
+<div class="form-container">
+    <form action="/action_page.php">
+      <!-- Ad -->
+      <input type="text" id="fname" name="firstname" placeholder="Ad">
+     <!-- Soyad -->
+      <input type="text" id="lname" name="lastname" placeholder="Soyad">
+      <br>
+     <!-- Email -->
+      <input type="email" id="email" name="email" placeholder="Email">
+     <!-- Muraviet Tipi-->
+      <select id="muraciet" >
+        <option value="" disabled selected>Müraciətin tipi</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+      </select>
+     <br>
+     <!-- Muracit Metni -->
+      <textarea id="subject" name="subject" placeholder="Müraciətin mətni"  ></textarea>
+      <br>
+     <!--Gonder-->
+      <input type="submit" value="Göndər">
+    </form>
+  </div>
 
 
 

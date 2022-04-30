@@ -29,6 +29,7 @@ body {
 h3 {
     font-family: 'gilroy-extrabold';
     color: #4E4F4F;
+    font-size: 52px;
     
 }
 input[type=text], input[type=email], select, textarea {
@@ -64,6 +65,10 @@ input[type=submit]:hover {
 
 }
 form {
-    position: absolute;
     margin-top: 72px;
+}
+
+.kompluqaqas {
+    position: absolute;
+    right: 0%;
 }

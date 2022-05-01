@@ -126,3 +126,15 @@ h4 {
     color: inherit;
     border-bottom: #53AFBE 1px solid;
 }
+                            /* ABOUT CSS*/
+ .about1 {
+     margin-top: 5%;
+     margin-bottom: 0;
+     max-height: 18rem;
+ }
+ .salam {
+ }
+ .about-container {
+     margin: 2% 13% 0 13%;
+     display: flex;
+ }

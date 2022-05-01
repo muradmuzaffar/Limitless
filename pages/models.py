@@ -18,4 +18,4 @@ class Contact(models.Model):
     complain_type = models.CharField(choices=MY_CHOICES, max_length=100)
 
     def __str__(self):
-        return self.email
+        return self.first_name

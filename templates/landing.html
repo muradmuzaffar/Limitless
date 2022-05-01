@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{%static 'css/main.min.css'%}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{%static 'css/stylesheet.css'%}" type="text/css" charset="utf-8" />
     <link rel="stylesheet" href="{%static 'css/style.css'%}">
     <title>Limitless</title>
 </head>
@@ -48,55 +50,112 @@
        </div>
        </div>
       </nav>
-<!-- navbar end -->
+<!-- Section 2 -->
+<section class="section2">
+  <!-- Yazi hissesi -->
+  <div class="form-container">
+   <h3>Limitlərini</h3>
+   <h3>aradan qaldır!</h4>
+    <p id="section2-p">İnklüziv cəmiyyətin bir parçası olmaq istəyirsənsə,</p>
+
+    <button class="btn login">
+      Daxil ol
+    </button>
+  </div>
+  <!-- Sekil-community -->
+  <img src="{%static 'images/community.svg'%}" width="50%" height="50%" alt="community" class="ms-auto community">
+</section>
+<hr class="hr-qisa">
 <!-- Forum Start -->
-<h3>Bizimlə Əlaqə yarat.</h3>
-<div class="form-container">
-    <form action="/action_page.php">
-      <!-- Ad -->
-      <input type="text" id="fname" name="firstname" placeholder="Ad">
-     <!-- Soyad -->
-      <input type="text" id="lname" name="lastname" placeholder="Soyad">
-      <br>
-     <!-- Email -->
-      <input type="email" id="email" name="email" placeholder="Email">
-     <!-- Muraviet Tipi-->
-      <select id="muraciet" >
-        <option value="" disabled selected>Müraciətin tipi</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-      </select>
-      
-      <select id="muraciet" >
-        
-        <option value="" disabled selected>Müraciətin tipi</option>
-        {% for item in form.complain_type %}
-
-        <!-- <option >{{item}}</option> -->
-        {{item}}
-          
-        {% endfor %}
-        
-      </select>
-     <br>
-     <!-- Muracit Metni -->
-      <textarea id="subject" name="subject" placeholder="Müraciətin mətni"  ></textarea>
-      <br>
-     <!--Gonder-->
-      <input type="submit" value="Göndər">
-
-      
-    </form> 
-
-
 
 
     
+<section class="section-form">
+              <!-- Contact form -->
+    <div class="form-container">
+        <h3>Bizimlə əlaqə yarat.</h3>
+        <form method="POST">
+          {% csrf_token %}
+          <!-- Ad -->
+          <!-- <input type="text" id="fname" name="firstname" placeholder="Ad"> -->
+          {{form.first_name}}
+         <!-- Soyad -->
+          <!-- <input type="text" id="lname" name="lastname" placeholder="Soyad"> -->
+          {{form.last_name}}
+          <br>
+         <!-- Email -->
+          <!-- <input type="email" id="email" name="email" placeholder="Email"> -->
+          {{form.email}}
+         <!-- Muraviet Tipi-->
+         
+         <br>
+         <!-- Muracit Metni -->
+          <!-- <textarea id="subject" name="subject" placeholder="Müraciətin mətni..."  ></textarea> -->
+          {{form.message}}
+
+          <select id="muraciet" >
+        
+            <option value="" disabled selected>Müraciətin tipi</option>
+            {% for item in form.complain_type %}
+          
+            <!-- <option >{{item}}</option> -->
+            {{item}}
+              
+            {% endfor %}
+            
+          </select>
+          <br>
+         <!--Gonder-->
+          <input type="submit" value="Göndər" class="btn">
+        </form>
+      </div>
+
+                <!-- Kompluqaqas -->
+
+      <img src="{%static 'images/kompluqaqas.png'%}" width="55.55%" height="55%" alt="" class="kompluqaqas">
+</section>
+<!-- Footer -->
+<hr class="hr-uzun">
+<footer>
+  <div class="footer-container">
+    <div class="row">
+     <!-- col 1 -->
+      <ul class="footer-list col-md-6">
+        <li><a href="landing.html" class="flink"><h4>Limitless</h4></a></li>
+        <li><i class="ficon fa-solid fa-envelope"></i>limitless@gmail.com</li>
+        <li><i class="ficon fa-solid fa-phone"></i>123456789</li>
+      </ul>
+      <!-- col 2 -->
+      <ul class="footer-list col-md-2">
+        <li><a href="#" class="flink">Mağaza</a></li>
+        <li><a href="#" class="flink">Bloqlar</a></li>
+        <li><a href="#" class="flink">İş elanları</a></li>
+      </ul>
+      <!-- col 3 -->
+      <ul class="footer-list col-md-2">
+        <li><a href="#" class="flink">Haqqımızda</a></li>
+        <li><a href="#" class="flink">Daxil ol</a></li>
+      </ul>
+      <!-- col 4 -->
+      <ul class="footer-list col-md-2">
+        <li><a href="#" class="flink">Terms and conditions</a></li>
+        <li><a href="#" class="flink">Privacy policy</a></li>
+      </ul>
+    </div>
+    <!-- social media -->
+    <div id="social-container">
+      <a href="#" class="flink"><i class="fa-brands fa-linkedin-in fsicon"></i></a>
+      <a href="#" class="flink"><i class="fa-brands fa-facebook-f fsicon"></i></a>
+      <a href="#" class="flink"><i class="fa-brands fa-instagram fsicon"></i></a>
+      <a href="#" class="flink"><i class="fa-solid fa-paper-plane fsicon"></i></a>
+      <a href="#" class="flink"><i class="fa-brands fa-whatsapp fsicon"></i></a>
+    </div>
   </div>
+</footer>
 
 
 
+<script src="https://kit.fontawesome.com/4ea6e3ab0b.js" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>

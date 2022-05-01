@@ -22,7 +22,8 @@ class ContactForm(forms.ModelForm):
     message = forms.CharField(widget=forms.TextInput(attrs={
         'placeholder': 'Your Message'
     }))
-    complain_type = forms.ChoiceField(choices=MY_CHOICES)
+    complain_type = forms.ChoiceField(choices=MY_CHOICES
+                                      )
 
     class Meta:
         model = Contact

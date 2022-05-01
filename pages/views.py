@@ -8,6 +8,7 @@ def landing(request):
     if request.method == "POST":
         form = ContactForm(request.POST)
         if form.is_valid():
+            print(form)
             form.save()
             return redirect("landing")
 

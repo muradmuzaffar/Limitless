@@ -24,8 +24,7 @@
 
 @font-face {
     font-family: 'gilroy-extrabold';
-    src: url('gilroy-extrabold-webfont.woff2') format('woff2'),
-         url('gilroy-extrabold-webfont.woff') format('woff');
+    src:url('gilroy-bold.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 

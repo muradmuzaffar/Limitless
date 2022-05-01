@@ -89,7 +89,7 @@ form {
 }
 /* Footer CSS */
 .hr-uzun {
-    width: 70%;
+    width: 75%;
     margin: auto;
     padding: 1px;
 }
@@ -100,14 +100,29 @@ h4 {
     font-weight: 600;
 }
 .footer-container {
-    display: flex;
-    margin: 2% 0 0 13%;
+    
+    margin: 2% 13% 0 13%;
 }
 .footer-list {
     list-style-type: none;
     color: #4E4F4F
 }
-
 .ficon {
     margin: 0 20px 0 0;
+}
+#social-container {
+    display: flex;
+    margin-top: 30px;
+}
+.fsicon {
+    margin: 0 20px 0 0;
+    font-size: 22px;
+}
+.flink {
+    text-decoration: none;
+    color: inherit;
+}
+.flink:hover {
+    color: inherit;
+    border-bottom: #53AFBE 1px solid;
 }

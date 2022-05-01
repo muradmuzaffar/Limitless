@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{%static 'css/main.min.css'%}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{%static 'css/stylesheet.css'%}" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="{%static 'css/style.css'%}">
+    <title>Limitless</title>
+</head>
+<body>
+<!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container">
+        <!-- Logo -->
+        <a href="#" class="navbar-brand">
+          <img src="{%static 'images/limitless_logo-01 4.png'%}" alt="" width="100%" height="100%">
+        </a>
+        <!-- Toggler -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+               <span class="navbar-toggler-icon"></span>
+            </button>
+
+        <!-- nav items -->
+       <div class="collapse navbar-collapse" id="navmenu">
+           <ul class="navbar-nav ms-auto">
+               <li class="nav-item">
+                   <a href="#" class="nav-link text-dark">Mağaza</a>
+               </li>
+               <li class="nav-item">
+                   <a href="#" class="nav-link text-dark">Bloqlar</a>
+               </li>
+               <li class="nav-item">
+                   <a href="#" class="nav-link text-dark">İş elanları</a>
+               </li>
+               <li class="nav-item">
+                <a href="#" class="nav-link text-dark">Haqqımızda</a>
+               </li>
+               <li class="nav-item">
+                <button class="btn login">
+                      Daxil ol
+                </button>
+                  <!-- <a href="#" class="nav-link text-light ">Daxil ol</a> -->
+               </li>
+               
+           </ul>
+       </div>
+       </div>
+      </nav>
+
+
+
+{% block body %}
+  
+{% endblock body %}
+
+
+<footer>
+    <div class="footer-container">
+      <div class="row">
+       <!-- col 1 -->
+        <ul class="footer-list col-md-6">
+          <li><a href="landing.html" class="flink"><h4>Limitless</h4></a></li>
+          <li><i class="ficon fa-solid fa-envelope"></i>limitless@gmail.com</li>
+          <li><i class="ficon fa-solid fa-phone"></i>123456789</li>
+        </ul>
+        <!-- col 2 -->
+        <ul class="footer-list col-md-2">
+          <li><a href="#" class="flink">Mağaza</a></li>
+          <li><a href="#" class="flink">Bloqlar</a></li>
+          <li><a href="#" class="flink">İş elanları</a></li>
+        </ul>
+        <!-- col 3 -->
+        <ul class="footer-list col-md-2">
+          <li><a href="#" class="flink">Haqqımızda</a></li>
+          <li><a href="#" class="flink">Daxil ol</a></li>
+        </ul>
+        <!-- col 4 -->
+        <ul class="footer-list col-md-2">
+          <li><a href="#" class="flink">Terms and conditions</a></li>
+          <li><a href="#" class="flink">Privacy policy</a></li>
+        </ul>
+      </div>
+      <!-- social media -->
+      <div id="social-container">
+        <a href="#" class="flink"><i class="fa-brands fa-linkedin-in fsicon"></i></a>
+        <a href="#" class="flink"><i class="fa-brands fa-facebook-f fsicon"></i></a>
+        <a href="#" class="flink"><i class="fa-brands fa-instagram fsicon"></i></a>
+        <a href="#" class="flink"><i class="fa-solid fa-paper-plane fsicon"></i></a>
+        <a href="#" class="flink"><i class="fa-brands fa-whatsapp fsicon"></i></a>
+      </div>
+    </div>
+  </footer>

@@ -67,28 +67,43 @@
 </section>
 <hr class="hr-qisa">
 <!-- Forum Start -->
+
+
+    
 <section class="section-form">
               <!-- Contact form -->
     <div class="form-container">
         <h3>Bizimlə əlaqə yarat.</h3>
-        <form action="/action_page.php">
+        <form method="POST">
+          {% csrf_token %}
           <!-- Ad -->
-          <input type="text" id="fname" name="firstname" placeholder="Ad">
+          <!-- <input type="text" id="fname" name="firstname" placeholder="Ad"> -->
+          {{form.first_name}}
          <!-- Soyad -->
-          <input type="text" id="lname" name="lastname" placeholder="Soyad">
+          <!-- <input type="text" id="lname" name="lastname" placeholder="Soyad"> -->
+          {{form.last_name}}
           <br>
          <!-- Email -->
-          <input type="email" id="email" name="email" placeholder="Email">
+          <!-- <input type="email" id="email" name="email" placeholder="Email"> -->
+          {{form.email}}
          <!-- Muraviet Tipi-->
-          <select id="muraciet" >
-            <option value="" disabled selected><p id="muraciet-text">Müraciətin tipi</p></option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-          </select>
+         
          <br>
          <!-- Muracit Metni -->
-          <textarea id="subject" name="subject" placeholder="Müraciətin mətni..."  ></textarea>
+          <!-- <textarea id="subject" name="subject" placeholder="Müraciətin mətni..."  ></textarea> -->
+          {{form.message}}
+
+          <select id="muraciet" >
+        
+            <option value="" disabled selected>Müraciətin tipi</option>
+            {% for item in form.complain_type %}
+          
+            <!-- <option >{{item}}</option> -->
+            {{item}}
+              
+            {% endfor %}
+            
+          </select>
           <br>
          <!--Gonder-->
           <input type="submit" value="Göndər" class="btn">
@@ -144,3 +159,6 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>
+
+
+

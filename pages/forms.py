@@ -12,7 +12,7 @@ class ContactForm(forms.ModelForm):
     email = forms.EmailField(widget=forms.EmailInput(attrs={
         'placeholder': 'Your Email'
     }))
-    message = forms.CharField(widget=forms.TextInput(attrs={
+    message = forms.CharField(widget=forms.Textarea(attrs={
         'placeholder': 'Your Message'
     }))
 

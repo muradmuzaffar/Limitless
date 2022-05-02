@@ -39,25 +39,13 @@
           <br>
          <!-- Email -->
           <!-- <input type="email" id="email" name="email" placeholder="Email"> -->
-          {{form.email}}
-         <!-- Muraviet Tipi-->
-         
+          {{form.email}}         
          <br>
          <!-- Muracit Metni -->
           <!-- <textarea id="subject" name="subject" placeholder="Müraciətin mətni..."  ></textarea> -->
           {{form.message}}
 
-          <select id="muraciet" >
-        
-            <option value="" disabled selected>Müraciətin tipi</option>
-            {% for item in form.complain_type %}
           
-            <!-- <option >{{item}}</option> -->
-            {{item}}
-              
-            {% endfor %}
-            
-          </select>
           <br>
          <!--Gonder-->
           <input type="submit" value="Göndər" class="btn">

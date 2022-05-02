@@ -31,7 +31,7 @@
                    <a href="#" class="nav-link text-dark">Mağaza</a>
                </li>
                <li class="nav-item">
-                   <a href="#" class="nav-link text-dark">Bloqlar</a>
+                   <a href="{%url 'blogs'%}" class="nav-link text-dark">Bloqlar</a>
                </li>
                <li class="nav-item">
                    <a href="#" class="nav-link text-dark">İş elanları</a>
@@ -40,9 +40,17 @@
                 <a href="{%url 'about'%}" class="nav-link text-dark">Haqqımızda</a>
                </li>
                <li class="nav-item">
-                <button class="btn login">
-                      Daxil ol
-                </button>
+                 {% if user.is_authenticated %}
+                  <a href="#" class="nav-link text-dark">{{user.username}}</a>
+
+                 {% else %}
+                  <button class="btn login">
+                    Daxil ol
+                  </button>
+                   
+                 {% endif %}
+                 
+                
                   <!-- <a href="#" class="nav-link text-light ">Daxil ol</a> -->
                </li>
                

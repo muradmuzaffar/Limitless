@@ -7,6 +7,7 @@ from .forms import ContactForm
 def landing(request):
     if request.method == "POST":
         form = ContactForm(request.POST)
+        print(form)
         if form.is_valid():
             print(form)
             form.save()
@@ -16,5 +17,10 @@ def landing(request):
 
     return render(request, "landing.html", context={"form": form})
 
+
 def about(request):
-    return render(request,"about.html")
+    return render(request, "about.html")
+
+
+def blogs(request):
+    return render(request, "blogs.html")

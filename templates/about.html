@@ -1,19 +1,33 @@
 {% extends "base.html" %}
 {% block body %}
 {%load static%}
+
 <!-- about 1 -->
-<section class="bg-primary">
+<section class="bg-primary section-about">
     <div class="about-container">
-            <div class="about1">
+            <div class="about1 ms-auto">
                 <h3>Vizyonumuz nədir?</h3>
-                <p style="max-width: 600px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque doloremque incidunt delectus. Quod nostrum quibusdam reprehenderit nemo repellat ex, placeat minus. Debitis voluptatibus iusto nesciunt suscipit, recusandae modi illo perspiciatis id, explicabo vero omnis laudantium illum corporis quasi delectus corrupti? Laudantium veniam quod est iure commodi? Culpa eum exercitationem corrupti?</p>
+                <p style="max-width: 600px; color: #fff;">İLorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud</p>
             </div>
+
             <div class="ms-auto">
-                <img src="{%static 'images/about1.svg'%}" width="70%" height="70%" class="salam">
+                <img src="{%static 'images/about1.svg'%}" width="80%" height="80%" class="salam d-none d-lg-block">
             </div>
-        
     </div>
   </section>
-      <!-- about 1 end -->
+ <!-- about 2 -->
+ <section class="bg-primary section-about">
+    <div class="about-container">
+        <div class="ms-auto">
+            <img src="{%static 'images/about2.svg'%}" width="80%" height="80%" class="salam d-none d-lg-block">
+        </div>
+
+        <div class="about1 ms-auto">
+            <h3 style="text-align: right;">Biz kimik?</h3>
+            <p style="max-width: 600px; text-align: right; color: #fff;" id="about2p">İLorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud</p>
+        </div>
+    </div>
+  </section>
+
 
 {% endblock body %}

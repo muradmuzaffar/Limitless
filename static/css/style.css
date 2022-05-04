@@ -3,7 +3,8 @@ body {
 }
 /* NAVBAR CSS */
 .nav-item {
-    margin-left: 6.5em;
+    margin-left: 6em;
+    /* px<1400 4 em ele */
 }
 .nav-link {
     font-size: large;
@@ -156,7 +157,32 @@ input[type=submit]:hover {
 .bloglink {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.1rem; 
+    margin-right: 1em;
 }
-#blog-search {
-
+.yan-xett {
+    border-right: 1px #fff solid;
+    height: 20px;
+    margin-right: 1em;
 }
+#blog-search input[type=text] {
+    padding: 10px;
+    width: 86%;
+    font-size: 15px;
+    border: 1px solid grey;
+    border-radius: 30px;
+    background: #53AFBE;
+  }
+  
+#blog-search button {
+    width: 0%;
+    padding: 10px;
+    color: white;
+    font-size: 17px;
+    background-color: #53AFBE00;
+    border: none;
+    border-left: 1px solid white;
+    cursor: pointer;
+    position: relative;
+    right: 22%;
+  }
+  

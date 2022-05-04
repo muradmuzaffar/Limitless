@@ -1,7 +1,33 @@
 {% extends "base.html" %}
 {% block body %}
 {%load static%}
-
+<!-- Blog basliq -->
+<section>
+    <div>
+        <h4 class="blog-elan">Limitless bloqları ilə tanış ol.</h4>
+        <p class="blog-elan-p">Vaxtaşırı yayımlanan bloqları oxuyaraq fikirlərini bizimlə bölüşə bilərsən.</p>
+    </div>
+</section>
+<!-- Blog nav -->
+<section class="bg-primary">
+    <nav class="nav container d-flex pb-2 pt-2 align-items-center">
+        <!-- menu items -->
+          <a class="nav-link text-light" aria-current="page" href="#">Bütün bloqlar</a>
+          <span class="yan-xett"></span>
+          <a class="nav-link text-light bloglink" href="#">Lorem</a>
+          <span class="yan-xett"></span>
+          <a class="nav-link text-light bloglink" href="#">Lorem</a>
+          <span class="yan-xett"></span>
+          <a class="nav-link text-light bloglink" href="#">Lorem</a>
+          <span class="yan-xett"></span>
+          <a class="nav-link text-light bloglink" href="#">Lorem</a>
+         <!-- search bar -->
+        <form id="blog-search" action="action_page.php" class="ms-auto">
+            <input type="text" placeholder="Search.." name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </nav>
+</section>
 
 
 

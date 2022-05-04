@@ -12,3 +12,24 @@ class Contact(models.Model):
 
     def __str__(self):
         return self.first_name
+
+
+class Category(models.Model):
+    name = models.CharField(max_length=50, null=True)
+    slug = models.SlugField(max_length=50, null=True, unique=True)
+
+    def __str__(self):
+        return self.name
+
+
+class Blogs(models.Model):
+    user = models.ForeignKey('auth.User',  on_delete=models.CASCADE)
+    name = models.CharField(max_length=50)
+    describtion = models.TextField()
+    created_date = models.DateField(auto_now_add=True)
+    category = models.ForeignKey(
+        Category, on_delete=models.DO_NOTHING, null=True)
+    image = models.ImageField(blank=True, null=True)
+
+    def __str__(self):
+        return self.name

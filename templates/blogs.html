@@ -13,14 +13,18 @@
     <nav class="nav container d-flex pb-2 pt-2 align-items-center">
         <!-- menu items -->
           <a class="nav-link text-light" aria-current="page" href="#">Bütün bloqlar</a>
+          {% for category in category  %}
+            
+          
           <span class="yan-xett"></span>
+          <a class="nav-link text-light bloglink" href="#">{{category}}</a>
+          <!-- <span class="yan-xett"></span>
           <a class="nav-link text-light bloglink" href="#">Lorem</a>
           <span class="yan-xett"></span>
           <a class="nav-link text-light bloglink" href="#">Lorem</a>
           <span class="yan-xett"></span>
-          <a class="nav-link text-light bloglink" href="#">Lorem</a>
-          <span class="yan-xett"></span>
-          <a class="nav-link text-light bloglink" href="#">Lorem</a>
+          <a class="nav-link text-light bloglink" href="#">Lorem</a> -->
+          {% endfor %}
          <!-- search bar -->
         <form id="blog-search" action="action_page.php" class="ms-auto">
             <input type="text" placeholder="Search.." name="search">

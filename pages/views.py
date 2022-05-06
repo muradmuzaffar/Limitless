@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from .forms import ContactForm
-from .models import Blogs
+from .models import Blogs, Category
 
 # Create your views here.
 
@@ -25,4 +25,5 @@ def about(request):
 
 def blogs(request):
     blogs = Blogs.objects.all()
-    return render(request, "blogs.html", {"blogs": blogs})
+    category = Category.objects.all()
+    return render(request, "blogs.html", {"blogs": blogs, "category": category})

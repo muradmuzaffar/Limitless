@@ -171,6 +171,7 @@ input[type=submit]:hover {
     border: 1px solid grey;
     border-radius: 30px;
     background: #53AFBE;
+    line-height: 10px;
   }
   
 #blog-search button {
@@ -180,9 +181,16 @@ input[type=submit]:hover {
     font-size: 17px;
     background-color: #53AFBE00;
     border: none;
-    border-left: 1px solid white;
     cursor: pointer;
     position: relative;
     right: 22%;
   }
-  
+ #blog-search button::before {
+    content: '';
+    height: 50%;
+    width: 1px;
+    position: absolute;
+    right: 100%;
+    top: 25%;
+    background-color: #e1dfdf;
+  }

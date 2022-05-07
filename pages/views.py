@@ -27,3 +27,7 @@ def blogs(request):
     blogs = Blogs.objects.all()
     category = Category.objects.all()
     return render(request, "blogs.html", {"blogs": blogs, "category": category})
+
+
+def blogs_detail(request):
+    return render(request, "single-blog.html")

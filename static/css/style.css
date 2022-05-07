@@ -218,3 +218,24 @@ input[type=submit]:hover {
     font-family: 'gilroy-extrabold', Arial, sans-serif;
     color: #4E4F4F;
 }
+                       /* SINGLE BLOG */
+#grey-bg1 {
+    background-color: #C4C4C4;
+    height: 300px;
+    width: 100%;
+    z-index: -1;
+}
+#grey-bg2 {
+    background-color: #F2F2F2;
+    height: 300px;
+    width: 100%;
+    z-index: -1;
+    margin-bottom: 20px;
+}
+#blog-body {
+    background-color: #fff;
+    position: absolute;
+    top: 30%;
+    left: 15%;
+    width: 70%;
+}

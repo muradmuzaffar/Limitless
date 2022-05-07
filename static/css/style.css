@@ -9,7 +9,7 @@ body {
 .nav-link {
     font-size: large;
 }
-.login {
+.button-orange {
     background-color: #FEB449;
     border-radius: 30px;
     justify-content: center; 
@@ -17,7 +17,7 @@ body {
     color: white;
     margin-top: 5px;
 }
-.login:hover {
+.button-orange:hover {
     background-color: whitesmoke;
     color: #FEB449;
     border: 1px solid #FEB449;
@@ -174,10 +174,9 @@ input[type=submit]:hover {
     background: #53AFBE;
     line-height: 10px;
   }
-  #blog-search input[type=text]::placeholder {
+#blog-search input[type=text]::placeholder {
       color: #fff;
       opacity: 0.8;
-      margin-left: 10%;
   }
 #blog-search button {
     width: 0%;
@@ -199,3 +198,23 @@ input[type=submit]:hover {
     top: 30%;
     background-color: #e1dfdf;
   }
+.blog-col {
+    margin: 5%;
+}
+.button-cyan {
+    background-color: #53AFBE;
+    border-radius: 30px;
+    justify-content: center; 
+    padding: 0.3em 2em 0.3em 2em;
+    color: white;
+    margin-top: 5px;
+} 
+.button-cyan:hover {
+    background-color: whitesmoke;
+    color: #53AFBE;
+    border: 1px solid #53AFBE;
+} 
+.card-title-blog{
+    font-family: 'gilroy-extrabold', Arial, sans-serif;
+    color: #4E4F4F;
+}

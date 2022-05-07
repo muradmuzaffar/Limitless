@@ -27,21 +27,61 @@
           {% endfor %}
          <!-- search bar -->
         <form id="blog-search" action="action_page.php" class="ms-auto">
-            <input type="text" placeholder="Axtar" name="search">
+            <input type="text" placeholder="Axtar" name="search" style="overflow: hidden;">
             <button type="submit"><i class="bi bi-search"></i></button>
         </form>
       </nav>
 </section>
 <!-- BLOGS -->
 <section>
-    <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
+    <div class="container">
+        <div class="row mb-5">
+             <!-- blog 1 -->
+             <div class="col-md-6 col-lg-4">
+                 <div class="card blog-col">
+                     <img src="{% static 'images/blog-covers/blog-1.svg'%}" class="card-img-top" alt="...">
+                     <div class="card-body">
+                       <h5 class="card-title card-title-blog">Blog başlığı lorem ipsum</h5>
+                       <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla imperdiet metus vel urna dictum, quis viverra felis pretium.</p>
+                       <a href="#" class="btn btn-primary button-cyan">Daha çox</a>
+                     </div>
+                   </div>
+             </div>
+              <!-- bloq 2 -->
+              <div class="col-md-6 col-lg-4">
+                  <div class="card blog-col">
+                    <img src="{% static 'images/blog-covers/blog-1.svg'%}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title card-title-blog" card-title-blog>Blog başlığı lorem ipsum</h5>
+                      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla imperdiet metus vel urna dictum, quis viverra felis pretium.</p>
+                      <a href="#" class="btn btn-primary button-cyan">Daha çox</a>
+                    </div>
+                  </div>
+              </div>
+                <!-- blog 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card blog-col">
+                      <img src="{% static 'images/blog-covers/blog-1.svg'%}" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title card-title-blog">Blog başlığı lorem ipsum</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla imperdiet metus vel urna dictum, quis viverra felis pretium.</p>
+                        <a href="#" class="btn btn-primary button-cyan">Daha çox</a>
+                      </div>
+                    </div>
+                </div>
+                <!-- blog 4 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card blog-col">
+                       <img src="{% static 'images/blog-covers/blog-1.svg'%}" class="card-img-top" alt="...">
+                       <div class="card-body">
+                         <h5 class="card-title card-title-blog">Blog başlığı lorem ipsum</h5>
+                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla imperdiet metus vel urna dictum, quis viverra felis pretium.</p>
+                         <a href="#" class="btn btn-primary button-cyan">Daha çox</a>
+                       </div>
+                     </div>        
+                </div>
       </div>
+    </div>
 </section>
 
 

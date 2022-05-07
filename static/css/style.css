@@ -168,17 +168,22 @@ input[type=submit]:hover {
     padding: 10px;
     width: 86%;
     font-size: 15px;
-    border: 1px solid grey;
+    border: 1px solid #fff;
+    color: #fff;
     border-radius: 30px;
     background: #53AFBE;
     line-height: 10px;
   }
-  
+  #blog-search input[type=text]::placeholder {
+      color: #fff;
+      opacity: 0.8;
+      margin-left: 10%;
+  }
 #blog-search button {
     width: 0%;
     padding: 10px;
     color: white;
-    font-size: 17px;
+    font-size: 13px;
     background-color: #53AFBE00;
     border: none;
     cursor: pointer;
@@ -187,10 +192,10 @@ input[type=submit]:hover {
   }
  #blog-search button::before {
     content: '';
-    height: 50%;
+    height: 40%;
     width: 1px;
     position: absolute;
     right: 100%;
-    top: 25%;
+    top: 30%;
     background-color: #e1dfdf;
   }

@@ -219,23 +219,18 @@ input[type=submit]:hover {
     color: #4E4F4F;
 }
                        /* SINGLE BLOG */
-#grey-bg1 {
-    background-color: #C4C4C4;
-    height: 300px;
-    width: 100%;
-    z-index: -1;
+.two-bg {
+background: linear-gradient(to bottom,#C4C4C4 0%,#C4C4C4 50%,#F2F2F2 50%, #F2F2F2 100%);
+justify-content: center;
+align-items: center;
+display: flex;
+height: auto;
+position: relative;
 }
-#grey-bg2 {
-    background-color: #F2F2F2;
-    height: 300px;
-    width: 100%;
-    z-index: -1;
-    margin-bottom: 20px;
-}
-#blog-body {
+.blog-body {
     background-color: #fff;
-    position: absolute;
-    top: 30%;
-    left: 15%;
     width: 70%;
+    position: relative;
+    height: auto;
+    margin: 10% 0;
 }

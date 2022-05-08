@@ -1,6 +1,7 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
 }
+                             /* BASE CSS */
 /* NAVBAR CSS */
 .nav-item {
     margin-left: 6em;
@@ -22,6 +23,46 @@ body {
     color: #FEB449;
     border: 1px solid #FEB449;
 }
+/* Footer CSS */
+.hr-uzun {
+    width: 75%;
+    margin: auto;
+    padding: 1px;
+}
+#limitless {
+    font-family: Arial, sans-serif;
+    color: #4E4F4F;
+    font-size: 20px;
+    font-weight: 600;
+}
+.footer-container {
+    
+    margin: 2% 13% 0 13%;
+}
+.footer-list {
+    list-style-type: none;
+    color: #4E4F4F
+}
+.ficon {
+    margin: 0 20px 0 0;
+}
+#social-container {
+    display: flex;
+    margin-top: 30px;
+}
+.fsicon {
+    margin: 0 20px 20px 0;
+    font-size: 22px;
+}
+.flink {
+    text-decoration: none;
+    color: inherit;
+}
+.flink:hover {
+    color: inherit;
+    border-bottom: #53AFBE 1px solid;
+}
+                            /* LANDING PAGE CSS */
 /* Section 2 CSS */
 .section2 {
     display: flex;
@@ -88,46 +129,7 @@ input[type=submit]:hover {
 .kompluqaqas {
     margin: 70px 0 0;
 }
-/* Footer CSS */
-.hr-uzun {
-    width: 75%;
-    margin: auto;
-    padding: 1px;
-}
-#limitless {
-    font-family: Arial, sans-serif;
-    color: #4E4F4F;
-    font-size: 20px;
-    font-weight: 600;
-}
-.footer-container {
-    
-    margin: 2% 13% 0 13%;
-}
-.footer-list {
-    list-style-type: none;
-    color: #4E4F4F
-}
-.ficon {
-    margin: 0 20px 0 0;
-}
-#social-container {
-    display: flex;
-    margin-top: 30px;
-}
-.fsicon {
-    margin: 0 20px 20px 0;
-    font-size: 22px;
-}
-.flink {
-    text-decoration: none;
-    color: inherit;
-}
-.flink:hover {
-    color: inherit;
-    border-bottom: #53AFBE 1px solid;
-}
-                            /* ABOUT CSS*/
+                             /* ABOUT CSS*/
  .about1 {
      margin: 5% 0 0;
      max-height: 18rem;
@@ -218,7 +220,7 @@ input[type=submit]:hover {
     font-family: 'gilroy-extrabold', Arial, sans-serif;
     color: #4E4F4F;
 }
-                       /* SINGLE BLOG */
+                             /* SINGLE BLOG */
 .two-bg {
 background: linear-gradient(to bottom,#C4C4C4 0%,#C4C4C4 50%,#F2F2F2 50%, #F2F2F2 100%);
 justify-content: center;
@@ -226,6 +228,7 @@ align-items: center;
 display: flex;
 height: auto;
 position: relative;
+margin-bottom: 5%;
 }
 .blog-body {
     background-color: #fff;

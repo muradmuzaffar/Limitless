@@ -244,7 +244,7 @@ margin-bottom: 5%;
 }
 .single-bg {
     position: absolute;
-    bottom: 50%; 
+    bottom: 40%; 
 }
 .b-circle{
     color: #6c6e6e;
@@ -253,7 +253,7 @@ margin-bottom: 5%;
 }
 .b-layers{
     color: #6c6e6e;
-    margin-right: 4%;
+    margin-right: 6%;
     font-family: 'gilroy-extrabold', Arial, sans-serif;
 }
 .b-calendar{

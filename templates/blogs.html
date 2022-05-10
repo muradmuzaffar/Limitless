@@ -37,69 +37,28 @@
     <div class="container">
         <div class="row mb-5">
              <!-- blog 1 -->
+             {% for blog in blogs  %}
+               
+             
              <div class="col-md-6 col-lg-4">
                  <div class="card blog-col">
-                     <img src="{% static 'images/blog-covers/blog-1.svg'%}" class="card-img-top" alt="...">
+                     <img src="{{blog.image.url}}" class="card-img-top" alt="...">
                      <div class="card-body">
-                       <h5 class="card-title card-title-blog">Blog başlığı lorem ipsum</h5>
-                       <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla imperdiet metus vel urna dictum, quis viverra felis pretium.</p>
-                       <a href="{%url 'blogs_detail'%}" class="btn btn-primary button-cyan">Daha çox</a>
+                       <h5 class="card-title card-title-blog">{{blog.name}}</h5>
+                       <p class="card-text">
+                           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla imperdiet metus vel urna dictum, quis viverra felis pretium.</p>
+                       <a href="{%url 'blogs_detail' blog.id %}" class="btn btn-primary button-cyan">Daha çox</a>
                        <div class="d-flex"> 
-                        <h6 class="b-circle b-footer-item"><i class="fa-regular fa-circle mx-1"></i>Sahriyar Samadov</h6>
-                        <h6 class="b-layers b-footer-item"><i class="bi bi-layers mx-1"></i>Kateqoriya</h6>
-                        <h6 class="b-calendar b-footer-item"><i class="bi bi-calendar-week mx-1"></i>09.08.2021</h6>
+                        <h6 class="b-circle b-footer-item"><i class="fa-regular fa-circle mx-1"></i>{{blog.user.username}}</h6>
+                        <h6 class="b-layers b-footer-item"><i class="bi bi-layers mx-1"></i>{{blog.category}}</h6>
+                        <h6 class="b-calendar b-footer-item"><i class="bi bi-calendar-week mx-1"></i>{{blog.created_date}}</h6>
                       </div>
                      </div>
                    </div>
              </div>
-              <!-- bloq 2 -->
-              <div class="col-md-6 col-lg-4">
-                  <div class="card blog-col">
-                    <img src="{% static 'images/blog-covers/blog-1.svg'%}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title card-title-blog" card-title-blog>Blog başlığı lorem ipsum</h5>
-                      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla imperdiet metus vel urna dictum, quis viverra felis pretium.</p>
-                      <a href="{%url 'blogs_detail'%}" class="btn btn-primary button-cyan">Daha çox</a>
-                      <div class="d-flex"> 
-                        <h6 class="b-circle b-footer-item"><i class="fa-regular fa-circle mx-1"></i>Sahriyar Samadov</h6>
-                        <h6 class="b-layers b-footer-item"><i class="bi bi-layers mx-1"></i>Kateqoriya</h6>
-                        <h6 class="b-calendar b-footer-item"><i class="bi bi-calendar-week mx-1"></i>09.08.2021</h6>
-                      </div>
-                    </div>
-                  </div>
-              </div>
-                <!-- blog 3 -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="card blog-col">
-                      <img src="{% static 'images/blog-covers/blog-1.svg'%}" class="card-img-top" alt="...">
-                      <div class="card-body">
-                        <h5 class="card-title card-title-blog">Blog başlığı lorem ipsum</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla imperdiet metus vel urna dictum, quis viverra felis pretium.</p>
-                        <a href="{%url 'blogs_detail'%}" class="btn btn-primary button-cyan">Daha çox</a>
-                        <div class="d-flex"> 
-                          <h6 class="b-circle b-footer-item"><i class="fa-regular fa-circle mx-1"></i>Sahriyar Samadov</h6>
-                          <h6 class="b-layers b-footer-item"><i class="bi bi-layers mx-1"></i>Kateqoriya</h6>
-                          <h6 class="b-calendar b-footer-item"><i class="bi bi-calendar-week mx-1"></i>09.08.2021</h6>
-                        </div>
-                      </div>
-                    </div>
-                </div>
-                <!-- blog 4 -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="card blog-col">
-                       <img src="{% static 'images/blog-covers/blog-1.svg'%}" class="card-img-top" alt="...">
-                       <div class="card-body">
-                         <h5 class="card-title card-title-blog">Blog başlığı lorem ipsum</h5>
-                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla imperdiet metus vel urna dictum, quis viverra felis pretium.</p>
-                         <a href="{%url 'blogs_detail'%}" class="btn btn-primary button-cyan">Daha çox</a>
-                         <div class="d-flex"> 
-                          <h6 class="b-circle b-footer-item"><i class="fa-regular fa-circle mx-1"></i>Sahriyar Samadov</h6>
-                          <h6 class="b-layers b-footer-item"><i class="bi bi-layers mx-1"></i>Kateqoriya</h6>
-                          <h6 class="b-calendar b-footer-item"><i class="bi bi-calendar-week mx-1"></i>09.08.2021</h6>
-                        </div>
-                       </div>
-                     </div>        
-                </div>
+             {% endfor %}
+              
+                    
       </div>
     </div>
 </section>

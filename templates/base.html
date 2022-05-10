@@ -40,20 +40,7 @@
                <li class="nav-item">
                 <a href="{%url 'about'%}" class="nav-link text-dark">Haqqımızda</a>
                </li>
-               <li class="nav-item">
-                 {% if user.is_authenticated %}
-                  <a href="#" class="nav-link text-dark">{{user.username}}</a>
-
-                 {% else %}
-                  <button class="btn button-orange">
-                    Daxil ol
-                  </button>
-                   
-                 {% endif %}
-                 
-                
-                  <!-- <a href="#" class="nav-link text-light ">Daxil ol</a> -->
-               </li>
+               
                
            </ul>
        </div>

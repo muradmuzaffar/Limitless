@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect,get_object_or_404
 from .forms import ContactForm
 from .models import Blogs, Category
 
@@ -29,5 +29,6 @@ def blogs(request):
     return render(request, "blogs.html", {"blogs": blogs, "category": category})
 
 
-def blogs_detail(request):
-    return render(request, "single-blog.html")
+def blogs_detail(request,id):
+    blog = get_object_or_404(Blogs,id=id)
+    return render(request, "single-blog.html",{"blog" : blog})

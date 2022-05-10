@@ -7,7 +7,7 @@ urlpatterns = [
     path('', landing, name='landing'),
     path('about', about, name='about'),
     path('blogs', blogs, name='blogs'),
-    path('blogs/detail', blogs_detail, name='blogs_detail'),
+    path('blogs/detail/<int:id>', blogs_detail, name='blogs_detail'),
 
 
 ]

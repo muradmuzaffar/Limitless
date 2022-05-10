@@ -97,6 +97,7 @@ textarea {
   box-sizing: border-box;
   margin: 10px 10px 10px 0;
   padding: 5px 9px 5px 20px;
+  outline: none;
 }
 textarea {
   width: 96%;
@@ -111,6 +112,7 @@ input[type="submit"] {
   color: white;
   margin-top: 5px;
 }
+
 input[type="submit"]:hover {
   background-color: whitesmoke;
   color: #53afbe;
@@ -203,7 +205,7 @@ input[type="submit"]:hover {
   background-color: #e1dfdf;
 }
 .blog-col {
-  margin: 5%;
+ margin-top: 5%;
 }
 .button-cyan {
   background-color: #53afbe;

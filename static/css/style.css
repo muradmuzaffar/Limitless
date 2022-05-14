@@ -81,7 +81,7 @@ body {
 /* FORM CUSTOM CSS */
 .section-form {
   display: flex;
-  padding: 100px 0;
+  padding: 50px 0 100px;
 }
 h3 {
   font-family: "gilroy-extrabold", Arial, sans-serif;
@@ -95,7 +95,7 @@ textarea {
   border: 1px solid #53afbe;
   border-radius: 30px;
   box-sizing: border-box;
-  margin: 10px 10px 10px 0;
+  margin: 10px 5px 5px 0;
   padding: 5px 9px 5px 20px;
   outline: none;
 }

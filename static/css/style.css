@@ -1,6 +1,7 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
+
 /* BASE CSS */
 /* NAVBAR CSS */
 .nav-item {
@@ -68,7 +69,6 @@ body {
   padding: 30px 0 100px;
 }
 #section2-p {
-  font-family: "gilroy-extrabold", Arial, sans-serif;
   color: #767777;
   font-size: 30px;
   max-width: 500px;
@@ -84,7 +84,6 @@ body {
   padding: 50px 0 100px;
 }
 h3 {
-  font-family: "gilroy-extrabold", Arial, sans-serif;
   color: #4e4f4f;
   font-size: 50px;
 }
@@ -146,18 +145,17 @@ input[type="submit"]:hover {
   margin: 2% 13% 0 13%;
   display: flex;
 }
-/* BLOG CSS*/
-.blog-elan {
+/* Page Start CSS*/
+.page-start {
   text-align: center;
-  font-family: "gilroy-extrabold", Arial, sans-serif;
   color: #4e4f4f;
-  font-size: 2em;
+  font-size: 2rem;
+  margin-bottom: 0.5em;
 }
-.blog-elan-p {
+.page-start-p {
   color: #767777;
   text-align: center;
-  font-family: "gilroy-extrabold", Arial, sans-serif;
-  font-size: 1.1em;
+  font-size: 1.1rem;
 }
 /* Blog nav */
 .bloglink {
@@ -221,7 +219,6 @@ input[type="submit"]:hover {
   border: 1px solid #53afbe;
 }
 .card-title-blog {
-  font-family: "gilroy-extrabold", Arial, sans-serif;
   color: #4e4f4f;
 }
 .b-footer-item {
@@ -252,16 +249,62 @@ input[type="submit"]:hover {
 }
 .b-circle {
   color: #6c6e6e;
-  font-family: "gilroy-extrabold", Arial, sans-serif;
   margin-left: 4%;
 }
 .b-layers {
   color: #6c6e6e;
   margin-right: 6%;
-  font-family: "gilroy-extrabold", Arial, sans-serif;
 }
 .b-calendar {
   color: #6c6e6e;
   margin-right: 4%;
+}
+                                      /* Job Posting CSS */
+/* Job search */
+#job-search input[type="text"] {
+  padding: 10px 50px 10px 15px;
+  width: 86%;
+  font-size: 15px;
+  border: 1px solid #fff;
+  color: #fff;
+  border-radius: 30px;
+  background: #53afbe;
+  line-height: 10px;
+}
+#job-search input[type="text"]::placeholder {
+  color: #fff;
+  opacity: 0.8;
+  margin-left: 0;
+}
+#job-search button {
+  width: 0%;
+  padding: 10px;
+  color: white;
+  font-size: 13px;
+  background-color: #53afbe00;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  right: 22%;
+}
+#job-search button::before {
+  content: "";
+  height: 40%;
+  width: 1px;
+  position: absolute;
+  right: 100%;
+  top: 30%;
+  background-color: #e1dfdf;
+}
+
+
+
+
+
+
+
+
+
+.gilroy{
   font-family: "gilroy-extrabold", Arial, sans-serif;
 }

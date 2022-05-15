@@ -22,6 +22,9 @@ def landing(request):
 def about(request):
     return render(request, "about.html")
 
+def job_posting(request):
+    return render(request, "job-posting.html")
+
 
 def blogs(request):
     blogs = Blogs.objects.all()

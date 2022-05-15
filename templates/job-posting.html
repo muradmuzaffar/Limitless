@@ -1,7 +1,128 @@
 {% extends "base.html" %}
 {% block body %}
 {%load static%}
+<!-- Job posting start -->
+<section>
+    <div>
+        <h4 class="page-start gilroy" >Limitless iş elanları.</h4>
+        <p class="page-start-p gilroy" >Yerləşdirilən elanlar arasından bilik və bacarıqlarına uyğun işi tap.</p>
+    </div>
+</section>
+<!-- Job posting nav -->
+<section class="bg-primary">
+    <nav class="nav container d-flex pb-2 pt-2 align-items-center">
+        <!-- menu items -->
+        <form id="job-search" action="action_page.php" class="">
+            <input type="text" placeholder="Axtar" name="search" style="overflow: hidden;">
+            <button type="submit"><i class="bi bi-search"></i></button>
+        </form>
+      </nav>
+</section>
+<!-- Job posts -->
+<section style="padding: 6em 0;">
+   <div class="container px-lg-5">
+     <div class="row g-4 ">
+       <!-- col 1 -->
+       <div class="col-md-6 justify-content-center">
+         <a href="" class="nav-link">
+           <div class="card shadow" style="max-width: 500px; border-radius: 20px; border: none;">
+               <div class="row g-0">
+                 <div class="col-md-3 justify-content-center align-items-center d-flex">
+                   <img src="{%static 'images/job-covers/apple.png'%}" width="50%" height="50%" class="img-fluid rounded-circle" alt="job-logo">
+                 </div>
+                 <div class="col-md-7">
+                   <div class="card-body mt-3" style="padding: 0;">
+                     <h5 class="card-title gilroy text-dark fs-5">Qrafik dizayner vakansiyası</h5>
+                   </div>
+                   <div class=" card-body d-flex mb-3 w-75" style="padding: 0;">
+                    <h6 class="card-text ms-2"><small class="text-muted gilroy"> E corp.</small></h6>
+                    <h6 class="card-text ms-auto"><small class="text-muted gilroy"><i class="bi bi-geo-alt-fill me-2"></i>Bakı</small></h6>
+                   </div>
+                 </div>
+                 <div class="col-md-2 d-flex align-items-center">
+                   <h4 class="fs-6 gilroy text-primary">1000 AZN</h3>
+                 </div>
+               </div>
+           </div>
+         </a>
+       </div>
+       <!-- col 2 -->
+       <div class="col-md-6 justify-content-center">
+        <a href="" class="nav-link">
+          <div class="card shadow" style="max-width: 500px; border-radius: 20px; border: none;">
+              <div class="row g-0">
+                <div class="col-md-3 justify-content-center align-items-center d-flex">
+                  <img src="{%static 'images/job-covers/apple.png'%}" width="50%" height="50%" class="img-fluid rounded-circle" alt="job-logo">
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body mt-3" style="padding: 0;">
+                    <h5 class="card-title gilroy text-dark fs-5">Qrafik dizayner vakansiyası</h5>
+                  </div>
+                  <div class=" card-body d-flex mb-3 w-75" style="padding: 0;">
+                   <h6 class="card-text ms-2"><small class="text-muted gilroy"> E corp.</small></h6>
+                   <h6 class="card-text ms-auto"><small class="text-muted gilroy"><i class="bi bi-geo-alt-fill me-2"></i>Bakı</small></h6>
+                  </div>
+                </div>
+                <div class="col-md-2 d-flex align-items-center">
+                  <h4 class="fs-6 gilroy text-primary text-wrap">Ə/h razılaşma yolu ilə</h3>
+                </div>
+              </div>
+          </div>
+        </a>
+      </div>
+       <!-- col 3 -->
+       <div class="col-md-6 justify-content-center">
+        <a href="" class="nav-link">
+          <div class="card shadow" style="max-width: 500px; border-radius: 20px; border: none;">
+              <div class="row g-0">
+                <div class="col-md-3 justify-content-center align-items-center d-flex">
+                  <img src="{%static 'images/job-covers/apple.png'%}" width="50%" height="50%" class="img-fluid rounded-circle" alt="job-logo">
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body mt-3" style="padding: 0;">
+                    <h5 class="card-title gilroy text-dark fs-5">Qrafik dizayner vakansiyası</h5>
+                  </div>
+                  <div class=" card-body d-flex mb-3 w-75" style="padding: 0;">
+                   <h6 class="card-text ms-2"><small class="text-muted gilroy"> E corp.</small></h6>
+                   <h6 class="card-text ms-auto"><small class="text-muted gilroy"><i class="bi bi-geo-alt-fill me-2"></i>Bakı</small></h6>
+                  </div>
+                </div>
+                <div class="col-md-2 d-flex align-items-center">
+                  <h4 class="fs-6 gilroy text-primary">1000 AZN</h3>
+                </div>
+              </div>
+          </div>
+        </a>
+      </div>
+      <!-- col 4 -->
+      <div class="col-md-6 justify-content-center">
+        <a href="" class="nav-link">
+          <div class="card shadow" style="max-width: 500px; border-radius: 20px; border: none;">
+              <div class="row g-0">
+                <div class="col-md-3 justify-content-center align-items-center d-flex">
+                  <img src="{%static 'images/job-covers/apple.png'%}" width="50%" height="50%" class="img-fluid rounded-circle" alt="job-logo">
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body mt-3" style="padding: 0;">
+                    <h5 class="card-title gilroy text-dark fs-5">Qrafik dizayner vakansiyası</h5>
+                  </div>
+                  <div class=" card-body d-flex mb-3 w-75" style="padding: 0;">
+                   <h6 class="card-text ms-2"><small class="text-muted gilroy"> E corp.</small></h6>
+                   <h6 class="card-text ms-auto"><small class="text-muted gilroy"><i class="bi bi-geo-alt-fill me-2"></i>Bakı</small></h6>
+                  </div>
+                </div>
+                <div class="col-md-2 d-flex align-items-center">
+                  <h4 class="fs-6 gilroy text-primary">1000 AZN</h3>
+                </div>
+              </div>
+          </div>
+        </a>
+      </div>
+       <!-- row end -->
+     </div>
 
+   </div>
+</section>
 
 
 

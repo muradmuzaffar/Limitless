@@ -169,7 +169,7 @@ input[type="submit"]:hover {
   margin-right: 1em;
 }
 #blog-search input[type="text"] {
-  padding: 10px;
+  padding: 0.5em 4em 0.5em 1em;
   width: 86%;
   font-size: 15px;
   border: 1px solid #fff;
@@ -191,7 +191,7 @@ input[type="submit"]:hover {
   border: none;
   cursor: pointer;
   position: relative;
-  right: 22%;
+  right: 18%;
 }
 #blog-search button::before {
   content: "";
@@ -262,7 +262,7 @@ input[type="submit"]:hover {
                                       /* Job Posting CSS */
 /* Job search */
 #job-search input[type="text"] {
-  padding: 10px 50px 10px 15px;
+  padding: 0.5em 4em 0.5em 1em;
   width: 86%;
   font-size: 15px;
   border: 1px solid #fff;
@@ -285,7 +285,7 @@ input[type="submit"]:hover {
   border: none;
   cursor: pointer;
   position: relative;
-  right: 22%;
+  right: 18%;
 }
 #job-search button::before {
   content: "";
@@ -295,6 +295,16 @@ input[type="submit"]:hover {
   right: 100%;
   top: 30%;
   background-color: #e1dfdf;
+} 
+                          /* Jog Single */
+.son-muraciet {
+  border: 1px solid #fff;
+  border-radius: 30px;
+  position: relative;
+  top: 20%;
+  max-width: 20em;
+  padding: 5px 0;
+  text-align: center;
 }
 
 
@@ -304,7 +314,10 @@ input[type="submit"]:hover {
 
 
 
-
+                        /* Universal classes */
 .gilroy{
   font-family: "gilroy-extrabold", Arial, sans-serif;
+}
+.transform:hover {
+  transform: scale(1.05);
 }

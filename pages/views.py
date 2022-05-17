@@ -21,11 +21,13 @@ def landing(request):
 
 def about(request):
     return render(request, "about.html")
-
+#muveqqeti
 def job_posting(request):
     return render(request, "job-posting.html")
 
-
+def job_single(request):
+    return render(request, "job-single.html")
+#muveqqeti
 def blogs(request):
     blogs = Blogs.objects.all()
     category = Category.objects.all()

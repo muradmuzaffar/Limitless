@@ -12,4 +12,8 @@ urlpatterns = [
     path('job-posting', job_posting, name='job-posting'),
     path('job-single', job_single, name='job-single'),
 
+    path('store', store, name='store'),
+    path('store-single', store_single, name='store-single'),
+  
+
 ]

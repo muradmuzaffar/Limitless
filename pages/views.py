@@ -27,6 +27,12 @@ def job_posting(request):
 
 def job_single(request):
     return render(request, "job-single.html")
+
+def store(request):
+    return render(request, "store.html")
+
+def store_single(request):
+    return render(request, "store-single.html")
 #muveqqeti
 def blogs(request):
     blogs = Blogs.objects.all()

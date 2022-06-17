@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect,get_object_or_404
 from .forms import ContactForm
-from .models import Blogs, Category
+from .models import Blogs, Category,Jobs
 
 # Create your views here.
 
@@ -23,10 +23,12 @@ def about(request):
     return render(request, "about.html")
 #muveqqeti
 def job_posting(request):
-    return render(request, "job-posting.html")
+    jobs = Jobs.objects.all()
+    return render(request, "job-posting.html",{"jobs" : jobs})
 
-def job_single(request):
-    return render(request, "job-single.html")
+def job_single(request,id):
+    job = get_object_or_404(Jobs,id=id)
+    return render(request, "job-single.html",{"job":job})
 
 def store(request):
     return render(request, "store.html")

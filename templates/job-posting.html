@@ -12,8 +12,8 @@
 <section class="bg-primary">
     <nav class="nav container d-flex pb-2 pt-2 align-items-center">
         <!-- menu items -->
-        <form id="job-search" action="action_page.php" class="">
-            <input type="text" placeholder="Axtar" name="search" style="overflow: hidden;">
+        <form id="job-search" class="">
+            <input type="text" placeholder="Axtar" name="q" value="{{request.GET.q}} " style="overflow: hidden;">
             <button type="submit"><i class="bi bi-search"></i></button>
         </form>
       </nav>
@@ -43,7 +43,13 @@
                    </div>
                  </div>
                  <div class="col-md-2 d-flex align-items-center">
-                   <h4 class="fs-6 gilroy text-primary">1000 AZN</h3>
+                  {% if job.salaryByDefault == True %}
+                  <h4 class="fs-6 gilroy text-primary">Ə/H razılaşma yolu ilə</h3>
+                  {%else%}
+                  <h4 class="fs-6 gilroy text-primary">{{job.salary}} AZN</h3>
+                    
+                  {% endif %}
+                   
                  </div>
                </div>
            </div>

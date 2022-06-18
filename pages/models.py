@@ -45,14 +45,17 @@ TYPE_CHOICES = [
     ("remote", ("remote"))
 
 ]
+
+
 class Jobs(models.Model):
     name = models.CharField(max_length=50)
     company = models.CharField(max_length=50)
     location = models.CharField(max_length=50)
     email = models.EmailField(blank=True, null=True)
-    type = models.CharField(max_length=50,choices=TYPE_CHOICES)
-    date = models.DateField(auto_now_add=True,blank=True, null=True)
+    type = models.CharField(max_length=50, choices=TYPE_CHOICES)
+    date = models.DateField(auto_now_add=True, blank=True, null=True)
     salary = models.IntegerField(blank=True, null=True)
+    salaryByDefault = models.BooleanField(blank=True, null=True, default=False)
     dedline = models.DateField()
     about = models.TextField()
     requirements = models.TextField()

@@ -16,7 +16,12 @@
            </div>
            <!-- col 3 -->
            <div class="col-md-3">
-               <h4 class="fs-5 gilroy text-light mt-2 mb-4">{{job.salary}} AZN</h4 class="fs-4 gilroy">
+                {% if job.salaryByDefault == True %}
+                <h4 class="fs-5 gilroy text-light mt-2 mb-4">Ə/H razılaşma yolu ilə</h4 class="fs-4 gilroy">     
+                {% else %}
+                <h4 class="fs-5 gilroy text-light mt-2 mb-4">{{job.salary}} AZN</h4 class="fs-4 gilroy"> 
+                {% endif %}
+               
                <h4 class="text-light gilroy fs-5 mb-4"><span style="color: #BFDDDD;">E-mail:</span>{{job.email}}</h4>
                <h4 class="text-light gilroy fs-5"><span style="color: #BFDDDD;">İş rejimi:</span> {{job.type}}</h4>
            </div>

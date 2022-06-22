@@ -8,12 +8,12 @@ urlpatterns = [
     path('about', about, name='about'),
     path('blogs', blogs, name='blogs'),
     path('blogs/detail/<int:id>', blogs_detail, name='blogs_detail'),
-# muveqqeti
+    # muveqqeti
     path('job-posting', job_posting, name='job-posting'),
     path('job-single/<int:id>', job_single, name='job-single'),
 
     path('store', store, name='store'),
-    path('store-single', store_single, name='store-single'),
-  
+    path('store-single/<int:id>', store_single, name='store-single'),
+
 
 ]

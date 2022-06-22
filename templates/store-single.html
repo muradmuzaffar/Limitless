@@ -1,131 +1,139 @@
 {% extends "base.html" %}
 {% block body %}
 {%load static%}
-<!-- Product -->
+
 <section style="padding: 100px 0 50px;">
-  <div class="row" style="margin: 0 10%;">
-    <!-- Product images -->
-    <div class="col-md-6">
-        <!-- slider main -->
+    <div class="row" style="margin: 0 10%;">
+      <!-- Product images -->
+      <div class="col-md-6">
+          <!-- slider main -->
         <div class="slider_main mb-4">
-        <div class="slider-items ">
-            <img src="https://randomuser.me/api/portraits/men/11.jpg" width="70%" height="70%" class="mx-auto" alt="">
-        </div>
-        <div class="slider-items">
-            <img src="https://randomuser.me/api/portraits/men/12.jpg" width="70%" height="70%" class="mx-auto" alt="">
-        </div>
-        <div class="slider-items">
-            <img src="https://randomuser.me/api/portraits/men/13.jpg" width="70%" height="70%" class="mx-auto" alt="">
-        </div>
-        <div class="slider-items">
-            <img src="https://randomuser.me/api/portraits/men/14.jpg" width="70%" height="70%" class="mx-auto" alt="">
-        </div>
-        <div class="slider-items">
-            <img src="https://randomuser.me/api/portraits/men/15.jpg" width="70%" height="70%" class="mx-auto" alt="">
-        </div>
-         </div>
-        <!-- slider nav -->
+          <div class="slider-items ">
+              <img src="{{product.image1.url}}" width="70%" height="70%" class="mx-auto" alt="">
+          </div>
+          {% if product.image2 %}
+          <div class="slider-items">
+              <img src="{{product.image2.url}}" width="70%" height="70%" class="mx-auto" alt="">
+          </div>
+          {% endif %}
+
+          {% if product.image3 %}
+          <div class="slider-items">
+              <img src="{{product.image3.url}}" width="70%" height="70%" class="mx-auto" alt="">
+          </div>
+          {% endif %}
+
+          {% if product.image4 %}
+          <div class="slider-items">
+              <img src="{{product.image4.url}}" width="70%" height="70%" class="mx-auto" alt="">
+          </div>
+          {% endif %}
+
+          {% if product.image5 %}
+          <div class="slider-items">
+              <img src="{{product.image5.url}}" width="70%" height="70%" class="mx-auto" alt="">
+          </div>
+          {% endif %}
+          <!-- <div class="slider-items">
+              <img src="{{product.image3.url}}" width="70%" height="70%" class="mx-auto" alt="">
+          </div>
+          <div class="slider-items">
+              <img src="{{product.image4.url}}" width="70%" height="70%" class="mx-auto" alt="">
+          </div>
+          <div class="slider-items">
+              <img src="{{product.image5.url}}" width="70%" height="70%" class="mx-auto" alt="">
+          </div> -->
+           </div> 
+          <!-- slider nav -->
         <div class="slider_nav mb-4">
-        <div class="slider-nav-items">
-            <img src="https://randomuser.me/api/portraits/men/11.jpg" width="100px" height="100px" alt="">
-        </div>
-        <div class="slider-nav-items">
-            <img src="https://randomuser.me/api/portraits/men/12.jpg" width="100px" height="100px" alt="">
-        </div>
-        <div class="slider-nav-items">
-            <img src="https://randomuser.me/api/portraits/men/13.jpg" width="100px" height="100px" alt="">
-        </div>
-        <div class="slider-nav-items">
-            <img src="https://randomuser.me/api/portraits/men/14.jpg" width="100px" height="100px" alt="">
-        </div>
-        <div class="slider-nav-items">
-            <img src="https://randomuser.me/api/portraits/men/15.jpg" width="100px" height="100px" alt="">
-        </div>
+          <div class="slider-nav-items">
+              <img src="{{product.image1.url}}" width="100px" height="100px" alt="">
           </div>
-      </div>
-   <!-- Product details -->
-    <div class="col-md-6">
-      <h3 class="gilroy text-dark">Brand və məhsul adı</h3>
-      <h3 class="gilroy text-primary">100 AZN</h3>
-      <h5 class="fs-6"><span style="color: #767777;">Ölçü:</span> M</h5>
-      <h5 class="fs-6"><span style="color: #767777;">Rəng:</span> Qara</h5>
-      <p class="mt-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae tincidunt velit, in placerat libero. Sed mollis ex nec leo efficitur, quis auctor sem fermentum. Ut gravida non lectus quis fringilla. Praesent eu risus efficitur, fermentum felis a, vulputate lectus. Sed iaculis dolor id varius mattis. Duis tincidunt sit amet eros nec volutpat.</p>
-     </div>
+          {% if product.image2 %}
+            <div class="slider-nav-items">
+                <img src="{{product.image2.url}}" width="100px" height="100px" alt="">
+            </div>
+            
+          {% endif %}
 
-  </div>
-</section>
+          {% if product.image3 %}
+            <div class="slider-nav-items">
+                <img src="{{product.image3.url}}" width="100px" height="100px" alt="">
+            </div>
+            
+          {% endif %}
 
- <!-- Similar items -->
- <section class="p-5 mb-5" style="background-color: #F2F2F2;">
-   <hr class="hr-qisa">
-   <h4 class="page-start gilroy mt-4" style="font-size: 1.5em;">Oxşar məhsullar</h4>
-   <div class="container align-items-center my-4">
-    <div class="row g-4 ">
-      <!-- col 1 -->
-      <div class="col-md-6 col-lg-4 d-flex justify-content-center ">
-        <div class="card shadow" style="width: 357px; height: 379px;">
-          <img src="{%static 'images/about1.svg'%}" style="width: 100%; height: 60%;" class="card-img-top mt-2" alt="...">
-          <div class="card-body mt-4">
-            <h5 class="card-title card-title-blog gilroy">Məhsulun adı</h5>
-            <a href="{%url 'store-single'%}" class="btn btn-primary button-cyan">Daha çox</a>
-          </div>
-        </div>
-      </div>
-      <!-- col 2 -->
-      <div class="col-md-6 col-lg-4 d-flex justify-content-center ">
-        <div class="card shadow" style="width: 357px; height: 379px;">
-          <img src="{%static 'images/about2.svg'%}" style="width: 100%; height: 60%;" class="card-img-top mt-2" alt="...">
-          <div class="card-body mt-4">
-            <h5 class="card-title card-title-blog gilroy">Məhsulun adı</h5>
-            <a href="{%url 'store-single'%}" class="btn btn-primary button-cyan">Daha çox</a>
-          </div>
-        </div>
-      </div>
-      <!-- col 3 -->
-      <div class="col-md-6 col-lg-4 d-flex justify-content-center ">
-        <div class="card shadow" style="width: 357px; height: 379px;">
-          <img src="{%static 'images/community.svg'%}" style="width: 100%; height: 60%;" class="card-img-top mt-2" alt="...">
-          <div class="card-body mt-4">
-            <h5 class="card-title card-title-blog gilroy">Məhsulun adı</h5>
-            <a href="{%url 'store-single'%}" class="btn btn-primary button-cyan">Daha çox</a>
-          </div>
-        </div>
-      </div>
-     <!-- col 4 -->
-     <div class="col-md-6 col-lg-4 d-flex justify-content-center ">
-      <div class="card shadow" style="width: 357px; height: 379px;">
-        <img src="{%static 'images/kompluqaqas.svg'%}" style="width: 100%; height: 60%;" class="card-img-top mt-2" alt="...">
-        <div class="card-body mt-4">
-          <h5 class="card-title card-title-blog gilroy">Məhsulun adı</h5>
-          <a href="{%url 'store-single'%}" class="btn btn-primary button-cyan">Daha çox</a>
-        </div>
-      </div>
-    </div>
-    <!-- col 5 -->
-    <div class="col-md-6 col-lg-4 d-flex justify-content-center ">
-      <div class="card shadow" style="width: 357px; height: 379px;">
-        <img src="{%static 'images/about1.svg'%}" style="width: 100%; height: 60%;" class="card-img-top mt-2" alt="...">
-        <div class="card-body mt-4">
-          <h5 class="card-title card-title-blog gilroy">Məhsulun adı</h5>
-          <a href="{%url 'store-single'%}" class="btn btn-primary button-cyan">Daha çox</a>
-        </div>
-      </div>
-    </div>
-    <!-- col 6 -->
-    <div class="col-md-6 col-lg-4 d-flex justify-content-center ">
-      <div class="card shadow" style="width: 357px; height: 379px;">
-        <img src="{%static 'images/about1.svg'%}" style="width: 100%; height: 60%;" class="card-img-top mt-2" alt="...">
-        <div class="card-body mt-4">
-          <h5 class="card-title card-title-blog gilroy">Məhsulun adı</h5>
-          <a href="{%url 'store-single'%}" class="btn btn-primary button-cyan">Daha çox</a>
-        </div>
-      </div>
-    </div>
-      <!-- row end -->
-    </div>
-  </div>
-</section>
+          {% if product.image4 %}
+            <div class="slider-nav-items">
+                <img src="{{product.image4.url}}" width="100px" height="100px" alt="">
+            </div>
+            
+          {% endif %}
 
+          {% if product.image5 %}
+            <div class="slider-nav-items">
+                <img src="{{product.image5.url}}" width="100px" height="100px" alt="">
+            </div>
+            
+          {% endif %}
+          
+          <!-- <div class="slider-nav-items">
+              <img src="{{product.image3.url}}" width="100px" height="100px" alt="">
+          </div>
+          <div class="slider-nav-items">
+              <img src="{{product.image4.url}}" width="100px" height="100px" alt="">
+          </div>
+          <div class="slider-nav-items">
+              <img src="{{product.image5.url}}" width="100px" height="100px" alt="">
+          </div> -->
+            </div> 
+        </div>
+     <!-- Product details -->
+      <div class="col-md-6">
+        <h3 class="gilroy text-dark">{{product.name}}</h3>
+        <h3 class="gilroy text-primary">{{product.price}} AZN</h3>
+        <h5 class="fs-6"><span style="color: #767777;">Ölçü:</span> {{product.size}}</h5>
+        <h5 class="fs-6"><span style="color: #767777;">Rəng:</span> {{product.color}}</h5>
+        <p class="mt-5">{{product.about}}</p>
+       </div>
+  
+    </div>
+  </section>
+
+
+<section class="p-5 mb-5" style="background-color: #F2F2F2;">
+    <hr class="hr-qisa">
+    <h4 class="page-start gilroy mt-4" style="font-size: 1.5em;">Oxşar məhsullar</h4>
+    <div class="container align-items-center my-4">
+        <div class="row g-4 ">
+
+            {% for p in products  %}
+
+            {% if p.category == product.category %}
+            {% if p.id != product.id %}
+            <div class="col-md-6 col-lg-4 d-flex justify-content-center ">
+                <div class="card shadow" style="width: 357px; height: 379px;">
+                  <img src="{{p.image1.url}}" style="width: 100%; height: 60%;" class="card-img-top mt-2" alt="...">
+                  <div class="card-body mt-4">
+                    <h5 class="card-title card-title-blog gilroy">{{p.name}}</h5>
+                    <a href="{%url 'store-single' p.id%}" class="btn btn-primary button-cyan">Daha çox</a>
+                  </div>
+                </div>
+              </div>
+              
+            {% endif %}
+            
+              
+            {% endif %}
+              
+            {% endfor %}
+
+           
+
+
+        </div>
+    </div>
+</section>  
 
 
 {% endblock body %}

@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
+from requests import get
 from .forms import ContactForm
-from .models import Blogs, Category, Jobs
+from .models import Blogs, Category, Jobs, Products
 
 # Create your views here.
 
@@ -21,11 +22,10 @@ def landing(request):
 
 def about(request):
     return render(request, "about.html")
-# muveqqeti
 
 
 def job_posting(request):
-    jobs = Jobs.objects.all()
+    jobs = Jobs.objects.all().order_by("-id")
     query = request.GET.get('q')
     if query:
         jobs = Jobs.objects.filter(name__icontains=query)
@@ -35,21 +35,25 @@ def job_posting(request):
 
 def job_single(request, id):
     job = get_object_or_404(Jobs, id=id)
-    print(job)
     return render(request, "job-single.html", {"job": job})
 
 
 def store(request):
-    return render(request, "store.html")
+    products = Products.objects.all().order_by("-id")
+    query = request.GET.get('q')
+    if query:
+        products = Products.objects.filter(name__icontains=query)
+    return render(request, "store.html", {"products": products})
 
 
-def store_single(request):
-    return render(request, "store-single.html")
-# muveqqeti
+def store_single(request, id):
+    product = get_object_or_404(Products, id=id)
+    products = Products.objects.all()
+    return render(request, "store-single.html", {"product": product, "products": products[:7]})
 
 
 def blogs(request):
-    blogs = Blogs.objects.all()
+    blogs = Blogs.objects.all().order_by("-id")
     category = Category.objects.all()
     return render(request, "blogs.html", {"blogs": blogs, "category": category})
 

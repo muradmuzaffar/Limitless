@@ -2,7 +2,7 @@ from random import choices
 from secrets import choice
 from statistics import mode
 from django.db import models
-
+from django.urls import reverse
 
 # Create your models here.
 
@@ -59,6 +59,57 @@ class Jobs(models.Model):
     dedline = models.DateField()
     about = models.TextField()
     requirements = models.TextField()
+
+    def __str__(self):
+        return self.name
+
+
+SIZE_CHOICES = [
+    ("X", ("X")),
+    ("M", ("M")),
+    ("XL", ("XL")),
+
+]
+
+COLOR_CHOICES = [
+    ("RED", ("RED")),
+    ("BLUE", ("BLUE")),
+    ("BLACK", ("BLACK")),
+
+]
+
+
+# CATEGORY_CHOICES = [
+#     ("Erqonomik", ("Erqonomik")),
+#     ("Handmade", ("Handmade")),
+
+
+# ]
+
+
+class ProductCategory(models.Model):
+    name = models.CharField(max_length=50, null=True)
+    slug = models.SlugField(max_length=50, null=True, unique=True)
+
+    def __str__(self):
+        return self.name
+
+
+class Products(models.Model):
+    name = models.CharField(max_length=50)
+    price = models.IntegerField()
+    size = models.CharField(max_length=50, choices=SIZE_CHOICES)
+    color = models.CharField(max_length=50, choices=COLOR_CHOICES)
+    about = models.TextField()
+    image1 = models.ImageField()
+    image2 = models.ImageField(blank=True, null=True)
+    image3 = models.ImageField(blank=True, null=True)
+    image4 = models.ImageField(blank=True, null=True)
+    image5 = models.ImageField(blank=True, null=True)
+    # category = models.CharField(
+    #     max_length=50, choices=CATEGORY_CHOICES, blank=True, null=True)
+    category = models.ForeignKey(
+        ProductCategory, on_delete=models.DO_NOTHING, null=True)
 
     def __str__(self):
         return self.name

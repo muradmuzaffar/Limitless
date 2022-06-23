@@ -5,9 +5,13 @@
 <section class="bg-primary">
     <nav class="nav container d-flex pb-2 pt-2 align-items-center">
         <!-- menu items -->
-          <a class="nav-link text-light" aria-current="page" href="#">Erqonomik məhsullar</a>
+        {% for category in categories  %}
+          
+        
+          <a class="nav-link text-light" aria-current="page" href="{%url 'store_by_category' category.slug %}">{{category}}</a>
           <span class="line-left"></span>
-          <a class="nav-link text-light" aria-current="page" href="#">Əl işləri</a>
+          <!-- <a class="nav-link text-light" aria-current="page" href="#">Əl işləri</a> -->
+        {% endfor %}
 
         <!-- search bar -->
         <form id="store-search" class="">

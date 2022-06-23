@@ -14,6 +14,8 @@ urlpatterns = [
 
     path('store', store, name='store'),
     path('store-single/<int:id>', store_single, name='store-single'),
+    path('<slug:category_slug>/',
+         store_by_category, name='store_by_category'),
 
 
 ]

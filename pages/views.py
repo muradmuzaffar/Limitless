@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from requests import get
 from .forms import ContactForm
-from .models import Blogs, Category, Jobs, Products
+from .models import Blogs, Category, Jobs, Products, ProductCategory
 
 # Create your views here.
 
@@ -40,16 +40,24 @@ def job_single(request, id):
 
 def store(request):
     products = Products.objects.all().order_by("-id")
+    categories = ProductCategory.objects.all()
     query = request.GET.get('q')
     if query:
         products = Products.objects.filter(name__icontains=query)
-    return render(request, "store.html", {"products": products})
+    return render(request, "store.html", {"products": products, "categories": categories})
 
 
 def store_single(request, id):
     product = get_object_or_404(Products, id=id)
     products = Products.objects.all()
     return render(request, "store-single.html", {"product": product, "products": products[:7]})
+
+
+def store_by_category(request, category_slug):
+    products = Products.objects.filter(
+        category__slug=category_slug)
+
+    return render(request, 'store_by_category.html', {'products': products})
 
 
 def blogs(request):

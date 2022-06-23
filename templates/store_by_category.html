@@ -3,7 +3,24 @@
 {%load static%}
 
 {% for  product in products|slice:":1"  %}
-<h1>{{product.category}} məhsulları</h1>
+<section class="bg-primary">
+  <nav class="nav container d-flex pb-2 pt-2 align-items-center">
+      <!-- menu items -->
+        <a class="nav-link text-light" aria-current="page" href="#">{{product.category}} məhsulları</a>
+  
+  
+      <!-- search bar -->
+      <form id="store-search" class="">
+          <input type="text" placeholder="Axtar"  name="q" value="{{request.GET.q}} " style="overflow: hidden;" class="text-wrap">
+          <button type="submit"><i class="bi bi-search"></i></button>
+      </form>
+      <!-- cart -->
+      <!-- <a class="nav-link text-light d-flex ms-auto" aria-current="page" href="#" >
+          <img src="{%static 'images/cart.svg'%}" width="100%" class="me-3">
+          Səbət
+      </a> -->
+    </nav>
+</section>
   
 {% endfor %}
 

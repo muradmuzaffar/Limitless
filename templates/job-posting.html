@@ -28,21 +28,21 @@
        <!-- col 1 -->
        <div class="col-md-6 d-flex justify-content-center ">
          <a href="{%url 'job-single' job.id %}" class="nav-link ">
-           <div class="card shadow transform" style="max-width: 500px; border-radius: 20px; border: none;">
+           <div class="card shadow transform" style="width: 40vw; border-radius: 20px; border: none;">
                <div class="row g-0">
-                 <div class="col-md-3 justify-content-center align-items-center d-flex">
+                 <!-- <div class="col-md-3 justify-content-center align-items-center d-flex">
                    <img src="{%static 'images/job-covers/apple.png'%}" width="50%" height="50%" class="img-fluid rounded-circle" alt="job-logo">
-                 </div>
-                 <div class="col-md-7">
-                   <div class="card-body mt-3" style="padding: 0;">
+                 </div> -->
+                 <div class="col-md-9">
+                   <div class="card-body mt-3 ms-4" style="padding: 0;">
                      <h5 class="card-title gilroy text-dark fs-5">{{job.name}}</h5>
                    </div>
-                   <div class=" card-body d-flex mb-3 w-75" style="padding: 0;">
+                   <div class=" card-body d-flex mb-3 ms-3 justify-content-between" style="padding: 0;">
                     <h6 class="card-text ms-2"><small class="text-muted gilroy"> {{job.company}}</small></h6>
-                    <h6 class="card-text ms-auto"><small class="text-muted gilroy"><i class="bi bi-geo-alt-fill me-2"></i>{{job.location}}</small></h6>
+                    <h6 class="card-text me-3"><small class="text-muted gilroy"><i class="bi bi-geo-alt-fill me-2"></i>{{job.location}}</small></h6>
                    </div>
                  </div>
-                 <div class="col-md-2 d-flex align-items-center">
+                 <div class="col-md-3 d-flex align-items-center ">
                   {% if job.salaryByDefault == True %}
                   <h4 class="fs-6 gilroy text-primary">Ə/H razılaşma yolu ilə</h3>
                   {%else%}

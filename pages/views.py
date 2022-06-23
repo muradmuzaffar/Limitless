@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from requests import get
+#from requests import get
 from .forms import ContactForm
 from .models import Blogs, Category, Jobs, Products, ProductCategory
 

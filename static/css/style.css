@@ -258,6 +258,11 @@ input[type="submit"]:hover {
 }
                                       /* Job Posting CSS */
 /* Job search */
+
+#job-search {
+  width: 50%;
+}
+
 #job-search input[type="text"] {
   padding: 0.5em 4em 0.5em 1em;
   width: 86%;
@@ -267,6 +272,7 @@ input[type="submit"]:hover {
   border-radius: 30px;
   background: #53afbe;
   line-height: 10px;
+  
 }
 #job-search input[type="text"]::placeholder {
   color: #fff;
@@ -282,7 +288,7 @@ input[type="submit"]:hover {
   border: none;
   cursor: pointer;
   position: relative;
-  right: 18%;
+  right: 7%;
 }
 #job-search button::before {
   content: "";
@@ -293,12 +299,15 @@ input[type="submit"]:hover {
   top: 30%;
   background-color: #e1dfdf;
 } 
+.job-div {
+  width: 40vw;
+  border-radius: 20px; 
+  border: none;
+}
                           /* Jog Single */
 .son-muraciet {
   border: 1px solid #fff;
   border-radius: 30px;
-  position: relative;
-  top: 20%;
   max-width: 20em;
   padding: 5px 0;
   text-align: center;
@@ -395,4 +404,7 @@ input[type="submit"]:hover {
 }
 .transform:hover {
   transform: scale(1.05);
+}
+pre {
+  font-family: Arial, Helvetica, sans-serif;
 }

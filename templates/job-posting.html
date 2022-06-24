@@ -12,8 +12,8 @@
 <section class="bg-primary">
     <nav class="nav container d-flex pb-2 pt-2 align-items-center">
         <!-- menu items -->
-        <form id="job-search" class="">
-            <input type="text" placeholder="Axtar" name="q" value="{{request.GET.q}} " style="overflow: hidden;">
+        <form id="job-search" class="mx-auto justify-content-center d-flex">
+            <input type="text" placeholder="Axtar" name="search" style="overflow: hidden;" class="text-wrap">
             <button type="submit"><i class="bi bi-search"></i></button>
         </form>
       </nav>
@@ -28,7 +28,7 @@
        <!-- col 1 -->
        <div class="col-md-6 d-flex justify-content-center ">
          <a href="{%url 'job-single' job.id %}" class="nav-link ">
-           <div class="card shadow transform" style="width: 40vw; border-radius: 20px; border: none;">
+           <div class="card shadow transform job-div">
                <div class="row g-0">
                  <!-- <div class="col-md-3 justify-content-center align-items-center d-flex">
                    <img src="{%static 'images/job-covers/apple.png'%}" width="50%" height="50%" class="img-fluid rounded-circle" alt="job-logo">
@@ -39,14 +39,14 @@
                    </div>
                    <div class=" card-body d-flex mb-3 ms-3 justify-content-between" style="padding: 0;">
                     <h6 class="card-text ms-2"><small class="text-muted gilroy"> {{job.company}}</small></h6>
-                    <h6 class="card-text me-3"><small class="text-muted gilroy"><i class="bi bi-geo-alt-fill me-2"></i>{{job.location}}</small></h6>
+                    <h6 class="card-text me-3 text-end"><small class="text-muted gilroy"><i class="bi bi-geo-alt-fill me-2"></i>{{job.location}}</small></h6>
                    </div>
                  </div>
-                 <div class="col-md-3 d-flex align-items-center ">
+                 <div class="col-md-3 d-flex align-items-center justify-content-center">
                   {% if job.salaryByDefault == True %}
                   <h4 class="fs-6 gilroy text-primary">Ə/H razılaşma yolu ilə</h3>
                   {%else%}
-                  <h4 class="fs-6 gilroy text-primary">{{job.salary}} AZN</h3>
+                  <h4 class="fs-6 gilroy text-primary text-center">{{job.salary}} AZN</h3>
                     
                   {% endif %}
                    

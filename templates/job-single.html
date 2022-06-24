@@ -4,18 +4,18 @@
 <section class="bg-primary p-5">
    
      <div class="row">
-           <!-- col 1 -->
-           <div class="col-md-3 d-flex justify-content-lg-center">
+           <!-- col 1(job image) -->
+           <!-- <div class="col-md-3 d-flex justify-content-lg-center">
             <img src="{%static 'images/job-covers/apple.png'%}" width="50%" height="50%" class="img-fluid rounded-circle" alt="job-logo" style="background-color: grey;">
-           </div>
+           </div> -->
            <!-- col 2 -->
-           <div class="col-md-3">
+           <div class="col-md-4">
                <h4 class="text-light gilroy fs-5 mb-4 mt-2">{{job.name}}</h4>
                <h4 class="gilroy fs-5 mb-4" style="color: #BFDDDD;"> {{job.company}}</h4>
                <h4 class="text-light gilroy fs-5"><span style="color: #BFDDDD;">Şəhər:</span> {{job.location}}</h4>
            </div>
            <!-- col 3 -->
-           <div class="col-md-3">
+           <div class="col-md-4">
                 {% if job.salaryByDefault == True %}
                 <h4 class="fs-5 gilroy text-light mt-2 mb-4">Ə/H razılaşma yolu ilə</h4 class="fs-4 gilroy">     
                 {% else %}
@@ -26,25 +26,26 @@
                <h4 class="text-light gilroy fs-5"><span style="color: #BFDDDD;">İş rejimi:</span> {{job.type}}</h4>
            </div>
            <!-- col 4 -->
-           <div class="col-md-3 d-flex justify-content-end pe-5">
+           <div class="col-md-4 d-flex justify-content-end pe-5">
                <h4 class="fs-5 gilroy" style="color: #337E8A; position: relative; right: 0%;"><i class="bi bi-calendar-week mx-1"></i>{{job.date}}</h4>
            </div>
        </div>
-       <div class="ms-auto son-muraciet gilroy text-light" ><span style="color: #BFDDDD;">Son müraciət tarixi:</span> {{job.dedline}}</div>
+       <div class="ms-auto mt-2 son-muraciet gilroy text-light" ><span style="color: #BFDDDD;">Son müraciət tarixi:</span> {{job.dedline}}</div>
 </section>
+<!-- Job Details -->
 <section>
     <div style="margin: 7em 10em;">
         <h4 class="gilroy text-dark">İş haqqında məlumat</h3>
-        <p>
+        <pre>
             {{job.about}}
 
-        </p>
+        </pre>
     </div>
     <div style="margin: 6em 10em;">
         <h4 class="gilroy text-dark">Namizəd üçün tələblər</h3>
-        <p>
+        <pre>
             {{job.requirements}}
-        </p>
+        </pre>
     </div>
 </section>
 

@@ -35,18 +35,18 @@
 <!-- BLOGS -->
 <section>
     <div class="container">
-        <div class="row mb-5 g-4">
+        <div class="row mb-5 mt-5 g-4">
              <!-- blog 1 -->
              {% for blog in blogs  %}
              <div class="col-md-6 col-lg-4">
-                 <div class="card h-100 blog-col">
-                     <img src="{{blog.image.url}}" style="width: 100%; height: 60%;" class="card-img-top " alt="...">
+                 <div class="card blog-col">
+                     <img src="{{blog.image.url}}" style="width: 200px; height: 250px; object-fit: contain;" class="card-img-top mx-auto " alt="...">
                      <div class="card-body">
                        <h5 class="card-title card-title-blog gilroy">{{blog.name}}</h5>
                        <p class="card-text">
                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla imperdiet metus vel urna dictum, quis viverra felis pretium.</p>
                        <a href="{%url 'blogs_detail' blog.id %}" class="btn btn-primary button-cyan">Daha çox</a>
-                       <div class="d-flex"> 
+                       <div class="d-flex mb-2"> 
                         <h6 class="b-circle b-footer-item gilroy"><i class="fa-regular fa-circle mx-1"></i>{{blog.user.username}}</h6>
                         <h6 class="b-layers b-footer-item gilroy"><i class="bi bi-layers mx-1"></i>{{blog.category}}</h6>
                         <h6 class="b-calendar b-footer-item gilroy"><i class="bi bi-calendar-week mx-1"></i>{{blog.created_date}}</h6>

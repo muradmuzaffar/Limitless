@@ -201,6 +201,8 @@ input[type="submit"]:hover {
 }
 .blog-col {
  margin-top: 5%;
+ max-height: 497px;
+ 
 }
 .button-cyan {
   background-color: #53afbe;
@@ -260,9 +262,15 @@ input[type="submit"]:hover {
 /* Job search */
 
 #job-search {
-  width: 50%;
+  width: 60%;
+  
 }
-
+#job-search::before {
+  content: "  ";
+  width: 30px;
+  height: 50px;
+  
+}
 #job-search input[type="text"] {
   padding: 0.5em 4em 0.5em 1em;
   width: 86%;
@@ -277,7 +285,6 @@ input[type="submit"]:hover {
 #job-search input[type="text"]::placeholder {
   color: #fff;
   opacity: 0.8;
-  margin-left: 0;
 }
 #job-search button {
   width: 0%;
@@ -343,7 +350,7 @@ input[type="submit"]:hover {
   border: none;
   cursor: pointer;
   position: relative;
-  right: 10%;
+  right: 9%;
 }
 #store-search button::before {
   content: "";
@@ -394,7 +401,7 @@ input[type="submit"]:hover {
 }
                        /* MEDIA QUERY */
  @media only screen and (max-width: 576px) {
-   /* Store Single css */
+ /* Store Single css */
   .next_arrow {  
     font-size: 3vh;
     width: 40px;
@@ -405,7 +412,15 @@ input[type="submit"]:hover {
       width: 40px;
       height: 40px;
     }
-  /* SINGLE BLOG */
+/* Store css */
+    #store-search button {
+     right: 20%;
+    }
+/* Job postings css */
+#job-search button {
+  right: 15%;
+}
+/* SINGLE BLOG */
   .blog-body {
    width: 100%;
    }
@@ -423,9 +438,17 @@ input[type="submit"]:hover {
  .two-bg{
   background-color: #fff;
  }
+ /* Job postings css */
+#job-search button {
+  right: 15%;
+}
+/* Store css */
+ #store-search button {
+  right: 15%;
+ }
 }
 @media only screen and (min-width: 768px) and (max-width: 992px){
-   /* Store Single css */
+ /* Store Single css */
   .next_arrow {  
   font-size: 3vh;
   width: 40px;
@@ -436,16 +459,20 @@ input[type="submit"]:hover {
     width: 40px;
     height: 40px;
   }
+/* Store css */
+  #store-search button {
+    right: 12%;
+  }
+/* Job postings css */
+#job-search button {
+  right: 12%;
+}
 }
 @media only screen and (min-width: 992px) and (max-width: 1200px){
-  body {
-   
-  }
+
 }
 @media only screen and (min-width: 1200px) and (max-width: 1400px){
-  body {
-   
-  }
+ 
 }
 
 

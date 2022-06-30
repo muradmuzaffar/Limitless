@@ -3,17 +3,17 @@
 {%load static%}
 <!--  -->
 <div class="two-bg">
-    <img src="{{blog.image.url}}" width="100%" height="60%" alt="" class="single-bg d-none d-md-block">
-    <div class="blog-body">
+    <!-- <img src="{%static 'images/background.png'%}" style=" width: 90%; height: 450px;"  alt="" class="single-bg d-none d-md-block"> -->
+    <div class="blog-body p-5">
         <h4 class="page-start mt-5 mb-5 gilroy">{{blog.name}}</h4>
         <div class="d-flex justify-content-between">
-            <h6 class="b-circle"><i class="fa-regular fa-circle mx-1"></i>{{blog.user.username}}</h6>
-            <h6 class="b-layers text-center"><i class="bi bi-layers mx-1"></i>{{blog.category}}</h6>
+            <h6 class="b-circle me-5"><i class="fa-regular fa-circle mx-1"></i>{{blog.user.username}}</h6>
+            <h6 class="b-layers"><i class="bi bi-layers mx-1"></i>{{blog.category}}</h6>
             <h6 class="b-calendar"><i class="bi bi-calendar-week mx-1"></i>{{blog.created_date}}</h6>
         </div>
-        <hr class="hr-qisa mt-1">
-        <p class="m-5 position-relative">
-            {{blog.describtion}}
+        <hr class="hr-qisa mt-2 mb-3">
+        <ppython manage. class="position-relative">
+            {{blog.describtion|linebreaks}}
         </p>
     </div>
 </div>

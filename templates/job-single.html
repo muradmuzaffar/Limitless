@@ -36,16 +36,16 @@
 <section>
     <div style="margin: 7em 10em;">
         <h4 class="gilroy text-dark">İş haqqında məlumat</h3>
-        <pre>
-            {{job.about}}
+        <p>
+            {{job.about|linebreaks}}
 
-        </pre>
+        </p>
     </div>
     <div style="margin: 6em 10em;">
         <h4 class="gilroy text-dark">Namizəd üçün tələblər</h3>
-        <pre>
-            {{job.requirements}}
-        </pre>
+        <p>
+            {{job.requirements|linebreaks}}
+        </p>
     </div>
 </section>
 

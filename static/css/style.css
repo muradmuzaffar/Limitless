@@ -226,6 +226,7 @@ input[type="submit"]:hover {
 }
 /* SINGLE BLOG */
 .two-bg {
+  background: linear-gradient(to bottom,#53afbe 0%,#53afbe 50%,#F2F2F2 50%, #F2F2F2 100%);
   background-color: #f2f2f2;
   justify-content: center;
   align-items: center;
@@ -235,28 +236,30 @@ input[type="submit"]:hover {
   margin-bottom: 5%;
 }
 .blog-body {
-  /* background: linear-gradient(to bottom,#C4C4C4 0%,#C4C4C4 50%,#F2F2F2 50%, #F2F2F2 100%); */
+  
   background-color: #fff;
-  width: 70%;
+  width: 80%;
   position: relative;
   height: auto;
   margin: 10% 0;
 }
 .single-bg {
   position: absolute;
-  bottom: 40%;
+  top: 0%;
+  border: 1px solid red;
 }
 .b-circle {
   color: #6c6e6e;
-  margin-left: 4%;
+  text-align: center;
+  /* margin-left: 4%; */
 }
 .b-layers {
   color: #6c6e6e;
-  margin-right: 3%;
+  /* margin-right: 3%; */
 }
 .b-calendar {
   color: #6c6e6e;
-  margin-right: 4%;
+  /* margin-right: 4%; */
 }
                                       /* Job Posting CSS */
 /* Job search */

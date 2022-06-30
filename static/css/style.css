@@ -314,7 +314,7 @@ input[type="submit"]:hover {
   border-radius: 20px; 
   border: none;
 }
-                          /* Jog Single */
+                                      /* Jog Single */
 .son-muraciet {
   border: 1px solid #fff;
   border-radius: 30px;
@@ -322,7 +322,7 @@ input[type="submit"]:hover {
   padding: 5px 0;
   text-align: center;
 }
-                          /* Store css */
+                                      /* Store css */
 .bi-cart2 {
   font-size: 1.5em;
 }
@@ -341,10 +341,43 @@ input[type="submit"]:hover {
   line-height: 10px;
 }
 #store-search input[type="text"]::placeholder {
+  position: absolute;
+  left: 4em;
   color: #fff;
   opacity: 0.8;
 }
-#store-search button {
+.filter-settings {
+  min-height: 120px; 
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  z-index: 1;
+}
+#collapseFilter {
+ border: 1px solid rgba(0, 0, 0, 0.125);
+ border-radius: 5px;
+}
+.dropdown {
+  width: 0%;
+  padding: 10px;
+  color: white;
+  font-size: 13px;
+  background-color: #53afbe00;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  left: 5%;
+}
+.dropdown::after {
+  content: "";
+  height: 40%;
+  width: 1px;
+  position: absolute;
+  left: 180%;
+  top: 30%;
+  background-color: #e1dfdf;
+}
+.store-button {
   width: 0%;
   padding: 10px;
   color: white;
@@ -355,10 +388,10 @@ input[type="submit"]:hover {
   position: relative;
   right: 9%;
 }
-#store-search button::before {
+.store-button::before {
   content: "";
   height: 40%;
-  width: 1px;
+  width: 0.5px;
   position: absolute;
   right: 100%;
   top: 30%;
@@ -405,31 +438,41 @@ input[type="submit"]:hover {
                        /* MEDIA QUERY */
  @media only screen and (max-width: 576px) {
  /* Store Single css */
-  .next_arrow {  
+.next_arrow {  
     font-size: 3vh;
     width: 40px;
     height: 40px;
-    }
-    .prev_arrow {
+ }
+.prev_arrow {
       font-size: 3vh;
       width: 40px;
       height: 40px;
     }
 /* Store css */
-    #store-search button {
-     right: 20%;
-    }
+#store-search {
+  width: 70%; 
+}
+.store-button {
+   right: 15%;
+ }
+ .dropdown {
+  left: 8%;
+ }
+ .filter-settings {
+  top: 75%;
+  left: 20%;
+}
 /* Job postings css */
 #job-search button {
   right: 15%;
 }
 /* SINGLE BLOG */
-  .blog-body {
+.blog-body {
    width: 100%;
-   }
-   .two-bg{
-    background-color: #fff;
-   }
+}
+.two-bg{
+  background-color: #fff;
+}
  }
 
 
@@ -446,9 +489,18 @@ input[type="submit"]:hover {
   right: 15%;
 }
 /* Store css */
- #store-search button {
+/* #store-search {
+  width: 60%;
+} */
+ .store-button {
   right: 15%;
  }
+ .dropdown {
+  left: 10%;
+ }
+ .filter-settings {
+  top: 60%;
+}
 }
 @media only screen and (min-width: 768px) and (max-width: 992px){
  /* Store Single css */
@@ -463,8 +515,14 @@ input[type="submit"]:hover {
     height: 40px;
   }
 /* Store css */
-  #store-search button {
+  .store-button {
     right: 12%;
+  }
+  .filter-settings {
+    top: 60%;
+  }
+  .dropdown {
+    left: 8%;
   }
 /* Job postings css */
 #job-search button {

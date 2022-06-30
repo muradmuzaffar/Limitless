@@ -3,7 +3,7 @@
 {%load static%}
 <!-- nav bar -->
 <section class="bg-primary">
-    <nav class="nav container d-flex pb-2 pt-2 align-items-center">
+    <nav class="nav container-md d-flex py-2 align-items-center">
         <!-- menu items -->
         {% for category in categories  %}
           
@@ -15,16 +15,38 @@
 
         <!-- search bar -->
         <form id="store-search" class="">
+          <!-- Filter -->
+          
+            <button class="btn dropdown" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFilter" aria-expanded="false" aria-controls="collapseFilter">
+              <i class="bi bi-chevron-down text-light"></i>
+            </button>
+          
+            <!-- Filter -->
+            
             <input type="text" placeholder="Axtar"  name="store" style="overflow: hidden;" class="text-wrap">
-            <button type="submit"><i class="bi bi-search"></i></button>
-        </form>
-        <!-- cart -->
+            <button type="submit" class=" store-button"><i class="bi bi-search"></i></button>
+          </form>
+          <!-- cart -->
+          
         <!-- <a class="nav-link text-light d-flex ms-auto" aria-current="page" href="#" >
             <img src="{%static 'images/cart.svg'%}" width="100%" class="me-3">
             Səbət
         </a> -->
       </nav>
 </section>
+<!-- dropdown menu -->
+<div class="filter-settings">
+  <div class="collapse" id="collapseFilter">
+    <div class="card card-body shadow" style="width: 350px; border: 0;">
+      <div class="d-flex">
+        <input type="text" placeholder="min.qiymət" class="w-50">
+        <h5 class="mt-3 mx-2">-</h5>
+        <input type="text" placeholder="max.qiymət" class="w-50">
+      </div>
+      <button class="btn button-cyan w-50 mx-auto"> Yadda saxla</button>
+    </div>
+  </div>
+</div>
 <!-- Store items -->
 <section style="padding: 6em 0;">
   <div class="container-lg align-items-center">
@@ -43,10 +65,13 @@
       {% endfor %}
       
       
-    
+      
     </div>
   </div>
+
 </section>
+
+
 
 
 {% endblock body %}

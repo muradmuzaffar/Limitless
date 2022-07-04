@@ -16,8 +16,9 @@ def landing(request):
             return redirect("landing")
 
     form = ContactForm()
+    blogs = Blogs.objects.all()[:6]
 
-    return render(request, "landing.html", context={"form": form})
+    return render(request, "landing.html", context={"form": form, "blogs": blogs})
 
 
 def about(request):
@@ -25,11 +26,12 @@ def about(request):
 
 
 def job_posting(request):
-    jobs = Jobs.objects.all().order_by("-id")
-    query = request.GET.get('q')
-    if query:
-        jobs = Jobs.objects.filter(name__icontains=query)
-        print(jobs)
+    if "q" in request.GET:
+        q = request.GET["q"]
+        jobs = Jobs.objects.filter(name__icontains=q)
+    else:
+        jobs = Jobs.objects.all().order_by("-id")
+
     return render(request, "job-posting.html", {"jobs": jobs})
 
 
@@ -39,11 +41,15 @@ def job_single(request, id):
 
 
 def store(request):
-    products = Products.objects.all().order_by("-id")
+    if "q" in request.GET:
+        q = request.GET["q"]
+        products = Products.objects.filter(name__icontains=q)
+
+    else:
+        products = Products.objects.all().order_by("-id")
+
     categories = ProductCategory.objects.all()
-    query = request.GET.get('q')
-    if query:
-        products = Products.objects.filter(name__icontains=query)
+
     return render(request, "store.html", {"products": products, "categories": categories})
 
 
@@ -61,7 +67,12 @@ def store_by_category(request, category_slug):
 
 
 def blogs(request):
-    blogs = Blogs.objects.all().order_by("-id")
+    if "q" in request.GET:
+        q = request.GET["q"]
+        blogs = Blogs.objects.filter(name__icontains=q)
+
+    else:
+        blogs = Blogs.objects.all().order_by("-id")
     category = Category.objects.all()
     return render(request, "blogs.html", {"blogs": blogs, "category": category})
 

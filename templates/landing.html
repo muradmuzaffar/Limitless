@@ -4,58 +4,169 @@
 
   
 
-<!-- Section 2 -->
-<section class="section2 gilroy">
+<!-- Section 1 -->
+<section class="section2 gilroy-medium d-sm-flex">
   <!-- Yazi hissesi -->
   <div class="form-container">
    <h3 class="landing-h3">Limitlərini</h3>
    <h3 class="landing-h3">aradan qaldır!</h3>
     <p id="section2-p">İnklüziv cəmiyyətin bir parçası olmaq istəyirsənsə,</p>
 
-    <button class="btn button-orange">
+    <button class="btn btn-lg button-cyan">
       Daxil ol
     </button>
   </div>
   <!-- Sekil-community -->
-  <img src="{%static 'images/community.svg'%}" width="50%" height="50%" alt="community" class="ms-auto community">
+  <img src="{%static 'images/landing1.svg'%}" width="45%" height="45%" alt="community" class="mx-auto d-none d-sm-block">
 </section>
-<hr class="hr-qisa">
-<!-- Forum Start -->
-
-
-    
-<section class="section-form">
-              <!-- Contact form -->
-    <div class="form-container">
-        <h3 class="gilroy landing-h3">Bizimlə əlaqə yarat.</h3>
-        <form id="contact" method="POST">
-          {% csrf_token %}
-          <!-- Ad -->
-          <!-- <input type="text" id="fname" name="firstname" placeholder="Ad"> -->
-          {{form.first_name}}
-         <!-- Soyad -->
-          <!-- <input type="text" id="lname" name="lastname" placeholder="Soyad"> -->
-          {{form.last_name}}
-          <br>
-         <!-- Email -->
-          <!-- <input type="email" id="email" name="email" placeholder="Email"> -->
-          {{form.email}}         
-         <br>
-         <!-- Muracit Metni -->
-          <!-- <textarea id="subject" name="subject" placeholder="Müraciətin mətni..."  ></textarea> -->
-          {{form.message}}
-
-          
-          <br>
-         <!--Gonder-->
-          <input type="submit" value="Göndər" class="btn">
-        </form>
-      </div>
-
-                <!-- Kompluqaqas -->
-
-      <img src="{%static 'images/kompluqaqas.png'%}" width="50%" height="54%" alt="" class="ms-auto kompluqaqas d-none d-md-block">
+<!-- Section 2 -->
+<div class="container d-none d-sm-block">
+  <div class="row">
+    <div class="col-md-4">
+    <h3 class="gilroy-medium facts-head text-center">620 min</h3>
+    <p class=" gilroy-medium text-center fs-4" style="color: #626363;">Azərbaycanda <br>əlilliyə sahib şəxslər</p>
+    </div> 
+    <div class="col-md-4">
+      <h3 class="gilroy-medium facts-head text-center">620 min</h3>
+      <p class=" gilroy-medium text-center fs-4" style="color: #626363;">Azərbaycanda <br>əlilliyə sahib şəxslər</p>
+    </div>
+    <div class="col-md-4">
+      <h3 class="gilroy-medium facts-head text-center">620 min</h3>
+       <p class="gilroy-medium text-center fs-4" style="color: #626363;">Azərbaycanda <br>əlilliyə sahib şəxslər</p>
+    </div>
+  </div>
+</div>
+<!-- Section 3 -->
+<section class="my-5 py-5 container d-sm-flex align-items-center">
+  <img src="{%static 'images/landing2.svg'%}" width="30%" height="30%" alt="community" class="d-none d-sm-block">
+  <div class="mx-5">
+    <h3 class="landing-h3 text-end gilroy-medium">Lorem Ipsum</h3>
+     <p class="facts-p gilroy-medium text-end">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in sodales enim, ac ultricies turpis.</p>
+     <a href="{%url 'store'%}" class="nav-link text-end gilroy-medium fs-4"><i class="fa-solid fa-arrow-left me-3" style="font-size: 1.5vw;"></i><span style="color: rgb(169, 169, 169); font-size: 1.5vw;" >Mağazaya Keçid Et</span></a>
+   </div>
 </section>
-<!-- Footer -->
+<!-- Section 4 -->
+<section class="my-5 py-5 container d-sm-flex align-items-center">
+  <div class="mx-5">
+    <h3 class="landing-h3 text-start gilroy-medium">Lorem Ipsum</h3>
+    <p class="facts-p gilroy-medium text-start">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in sodales enim, ac ultricies turpis.</p>
+    <a href="{%url 'job-posting'%}" class="nav-link text-start gilroy-medium fs-4"><span style="color: rgb(169, 169, 169); font-size: 1.5vw;">İş elanına keçid et</span><i class="fa-solid fa-arrow-right ms-3" style="font-size: 1.5vw;"></i></a>
+  </div>
+  <img src="{%static 'images/landing3.svg'%}" width="30%" height="30%" alt="community" class="d-none d-sm-block">
+</section>
+<!-- Section 5 -->
+<section class="container">
+  <h3 class="landing-h3 text-start gilroy-medium mx-5">Bloqlar</h3>
+
+  <div class="landing_slider">
+           <!-- blog 1 -->
+           <div class="slider-item">
+            <div class="card" style="width: 18rem;">
+              <img src="https://randomuser.me/api/portraits/men/9.jpg" class="card-img-top mx-auto" style="width:100%; height: 250px; object-fit: contain;" alt="...">
+              <div class="card-img-overlay" style="margin: 65% 0 0 5%; height: 200px;">
+                <div class="badge gilroy bg-primary py-2 px-3 text-wrap" style="border-radius: 10px; ">Civic Engagement engagement </div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title gilroy-medium" style="color: gray;">11 Nov 2022</h5>
+                <h5 class="card-title gilroy fs-3 landing-h3">Blog title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="nav-link text-start gilroy-medium fs-5 d-flex   align-items-center"><span style="color: rgb(169, 169, 169);">Ətraflı</span><i class="fa-solid fa-arrow-right ms-3" style="font-size: 1.5vw;"></i></a>
+              </div>
+            </div>
+           </div>
+           <!-- blog 2-->
+            <div class="slider-items ">
+              <div class="card" style="width: 18rem;">
+                <img src="{%static 'images/Untitled-1.png'%}" class="card-img-top mx-auto" style="width:100%; height: 250px; object-fit: contain;" alt="...">
+                <div class="card-img-overlay" style="margin: 65% 0 0 5%; height: 200px;">
+                  <div class="badge gilroy bg-primary py-2 px-3 text-wrap" style="border-radius: 10px; ">Civic Engagement engagement </div>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title gilroy-medium" style="color: gray;">11 Nov 2022</h5>
+                  <h5 class="card-title gilroy fs-3 landing-h3">Blog title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="nav-link text-start gilroy-medium fs-5 d-flex   align-items-center"><span style="color: rgb(169, 169, 169);">Ətraflı</span><i class="fa-solid fa-arrow-right ms-3" style="font-size: 1.5vw;"></i></a>
+                </div>
+              </div>
+            </div>
+           <!-- blog 3-->
+           <div class="slider-items">
+            <div class="card" style="width: 18rem;">
+              <img src="{%static 'images/blog-bg.jpg'%" class="card-img-top mx-auto" style="width:100%; height: 250px; object-fit: contain;" alt="...">
+              <div class="card-img-overlay" style="margin: 65% 0 0 5%; height: 200px;">
+                <div class="badge gilroy bg-primary py-2 px-3 text-wrap" style="border-radius: 10px; ">Civic Engagement engagement </div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title gilroy-medium" style="color: gray;">11 Nov 2022</h5>
+                <h5 class="card-title gilroy fs-3 landing-h3">Blog title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="nav-link text-start gilroy-medium fs-5 d-flex   align-items-center"><span style="color: rgb(169, 169, 169);">Ətraflı</span><i class="fa-solid fa-arrow-right ms-3" style="font-size: 1.5vw;"></i></a>
+              </div>
+            </div>
+           </div>
+             <!-- blog 4-->
+             <div class="slider-items ">
+              <div class="card" style="width: 18rem;">
+                <img src="https://randomuser.me/api/portraits/men/69.jpg"  class="card-img-top mx-auto" style="width:100%; height: 250px; object-fit: contain;" alt="...">
+                <div class="card-img-overlay" style="margin: 65% 0 0 5%; height: 200px;">
+                  <div class="badge gilroy bg-primary py-2 px-3 text-wrap" style="border-radius: 10px; ">Civic Engagement engagement </div>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title gilroy-medium" style="color: gray;">11 Nov 2022</h5>
+                  <h5 class="card-title gilroy fs-3 landing-h3">Blog title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="nav-link text-start gilroy-medium fs-5 d-flex   align-items-center"><span style="color: rgb(169, 169, 169);">Ətraflı</span><i class="fa-solid fa-arrow-right ms-3" style="font-size: 1.5vw;"></i></a>
+                </div>
+              </div>
+            </div>
+              <!-- blog 5-->
+              <div class="slider-items ">
+                <div class="card" style="width: 18rem;">
+                  <img src="https://randomuser.me/api/portraits/men/56.jpg"  class="card-img-top mx-auto" style="width:100%; height: 250px; object-fit: contain;" alt="...">
+                  <div class="card-img-overlay" style="margin: 65% 0 0 5%; height: 200px;">
+                    <div class="badge gilroy bg-primary py-2 px-3 text-wrap" style="border-radius: 10px; ">Civic Engagement engagement </div>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title gilroy-medium" style="color: gray;">11 Nov 2022</h5>
+                    <h5 class="card-title gilroy fs-3 landing-h3">Blog title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="nav-link text-start gilroy-medium fs-5 d-flex   align-items-center"><span style="color: rgb(169, 169, 169);">Ətraflı</span><i class="fa-solid fa-arrow-right ms-3" style="font-size: 1.5vw;"></i></a>
+                  </div>
+                </div>
+              </div>
+                <!-- blog 6-->
+            <div class="slider-items ">
+              <div class="card" style="width: 18rem;">
+                <img src="https://randomuser.me/api/portraits/men/99.jpg"  class="card-img-top mx-auto" style="width:100%; height: 250px; object-fit: contain;" alt="...">
+                <div class="card-img-overlay" style="margin: 65% 0 0 5%; height: 200px;">
+                  <div class="badge gilroy bg-primary py-2 px-3 text-wrap" style="border-radius: 10px; ">Civic Engagement engagement </div>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title gilroy-medium" style="color: gray;">11 Nov 2022</h5>
+                  <h5 class="card-title gilroy fs-3 landing-h3">Blog title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="nav-link text-start gilroy-medium fs-5 d-flex   align-items-center"><span style="color: rgb(169, 169, 169);">Ətraflı</span><i class="fa-solid fa-arrow-right ms-3" style="font-size: 1.5vw;"></i></a>
+                </div>
+              </div>
+            </div>
+              <!-- blog 7-->
+              <div class="slider-items ">
+                <div class="card" style="width: 18rem;">
+                  <img src="https://randomuser.me/api/portraits/men/76.jpg"  class="card-img-top mx-auto" style="width:100%; height: 250px; object-fit: contain;" alt="...">
+                  <div class="card-img-overlay" style="margin: 65% 0 0 5%; height: 200px;">
+                    <div class="badge gilroy bg-primary py-2 px-3 text-wrap" style="border-radius: 10px; ">Civic Engagement engagement </div>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title gilroy-medium" style="color: gray;">11 Nov 2022</h5>
+                    <h5 class="card-title gilroy fs-3 landing-h3">Blog title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="nav-link text-start gilroy-medium fs-5 d-flex   align-items-center"><span style="color: rgb(169, 169, 169);">Ətraflı</span><i class="fa-solid fa-arrow-right ms-3" style="font-size: 1.5vw;"></i></a>
+                  </div>
+                </div>
+              </div>
+
+          </div>
+  
+</section>
 
 {% endblock body %}

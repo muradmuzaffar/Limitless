@@ -25,8 +25,12 @@
 @font-face {
     font-family: 'gilroy-extrabold';
     src:url('gilroy-bold.woff') format('woff');
+    font-weight:normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'gilroy-medium';
+    src:url('Gilroy-Medium.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
-

@@ -53,6 +53,14 @@ $('.slider_nav').slick({
       }
     },
   
-
   ]
+});
+
+//Landing Slider
+$('.landing_slider').slick({
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  arrows: true,
+  prevArrow: '<span class="prev_arrow"><i class="fa-solid fa-angle-left m-auto"></i></span>',
+  nextArrow: '<span class="next_arrow"><i class="fa-solid fa-angle-right m-auto"></i></span>'
 });

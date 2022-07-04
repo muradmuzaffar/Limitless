@@ -62,12 +62,11 @@ body {
 /* LANDING PAGE CSS */
 /* Section 2 CSS */
 .section2 {
-  display: flex;
   padding: 30px 0 100px;
 }
 #section2-p {
   color: #767777;
-  font-size: 30px;
+  font-size: 2vw;
   max-width: 500px;
 }
 .hr-qisa {
@@ -75,59 +74,20 @@ body {
   margin: auto;
   padding: 1px;
 }
-/* FORM CUSTOM CSS */
-.section-form {
-  display: flex;
-  padding: 50px 0 100px;
+.form-container {
+  margin: 7% 0 0 10%;
 }
 .landing-h3 {
   color: #4e4f4f;
-  font-size: 50px;
+  font-size: 4vw;
 }
-input[type="text"],
-input[type="email"],
-select,
-textarea {
-  border: 1px solid #53afbe;
-  border-radius: 30px;
-  box-sizing: border-box;
-  margin: 10px 5px 5px 0;
-  padding: 5px 9px 5px 20px;
-  outline: none;
+.facts-head {
+  font-size: 4vw;
+  color: #D48B35;
 }
-textarea {
-  width: 96%;
-  height: 150px;
-  border-radius: 18px;
-}
-input[type="submit"] {
-  background-color: #53afbe;
-  border-radius: 30px;
-  justify-content: center;
-  padding: 0.3em 2em 0.3em 2em;
-  color: white;
-  margin-top: 5px;
-}
-
-input[type="submit"]:hover {
-  background-color: whitesmoke;
-  color: #53afbe;
-  border: 1px solid #53afbe;
-}
-#muraciet {
-  padding-right: 5rem;
-  color: #8e8e8e;
-}
-
-.form-container {
-  margin: 7% 0 0 13%;
-}
-#contact {
-  margin-top: 72px;
-}
-
-.kompluqaqas {
-  margin: 70px 0 0;
+.facts-p {
+  color: #767777;
+  font-size: 2vw;
 }
 /* ABOUT CSS*/
 .about1 {
@@ -437,6 +397,13 @@ input[type="submit"]:hover {
 }
                        /* MEDIA QUERY */
  @media only screen and (max-width: 576px) {
+ /* Landing css */
+ .landing-h3 {
+  font-size: 7vw;
+ }
+#section2-p {
+  font-size: vw;
+}
  /* Store Single css */
 .next_arrow {  
     font-size: 3vh;
@@ -466,6 +433,9 @@ input[type="submit"]:hover {
 #job-search button {
   right: 15%;
 }
+.job-div {
+  width: 70vw;
+}
 /* SINGLE BLOG */
 .blog-body {
    width: 100%;
@@ -487,6 +457,9 @@ input[type="submit"]:hover {
  /* Job postings css */
 #job-search button {
   right: 15%;
+}
+.job-div{
+  width: 60vw;
 }
 /* Store css */
 /* #store-search {
@@ -530,7 +503,10 @@ input[type="submit"]:hover {
 }
 }
 @media only screen and (min-width: 992px) and (max-width: 1200px){
-
+/* Store css */
+.filter-settings {
+  top: 50%;
+}
 }
 @media only screen and (min-width: 1200px) and (max-width: 1400px){
  
@@ -543,6 +519,9 @@ input[type="submit"]:hover {
                         /* Universal classes */
 .gilroy{
   font-family: "gilroy-extrabold", Arial, sans-serif;
+}
+.gilroy-medium {
+  font-family: "gilroy-medium", Arial, sans-serif;
 }
 .transform:hover {
   transform: scale(1.05);

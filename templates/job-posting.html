@@ -21,14 +21,14 @@
 <!-- Job posts -->
 <section style="padding: 6em 0;">
    <div class="container-lg">
-     <div class="row g-4 ">
+     <div class="row g-md-4 ">
        {% for job in jobs  %}
          
        
        <!-- col 1 -->
        <div class="col-md-6 d-flex justify-content-center ">
          <a href="{%url 'job-single' job.id %}" class="nav-link ">
-           <div class="card shadow transform job-div">
+           <div class="card shadow transform job-div h-100">
                <div class="row g-0">
                  <!-- <div class="col-md-3 justify-content-center align-items-center d-flex">
                    <img src="{%static 'images/job-covers/apple.png'%}" width="50%" height="50%" class="img-fluid rounded-circle" alt="job-logo">

@@ -1,4 +1,4 @@
-from .models import Contact
+from .models import Contact, Subscribtion
 from django import forms
 
 
@@ -20,3 +20,16 @@ class ContactForm(forms.ModelForm):
         model = Contact
         fields = ['first_name', 'last_name',
                   'email', 'message']
+
+
+class SubscribtionForm(forms.ModelForm):
+    email = forms.EmailField(widget=forms.EmailInput(attrs={
+        'placeholder': 'e-poçt ünvanınızı qeyd edin',
+        'id': 'gilroy-medium',
+        'style': 'overflow: hidden;'
+
+    }))
+
+    class Meta:
+        model = Subscribtion
+        fields = ['email']

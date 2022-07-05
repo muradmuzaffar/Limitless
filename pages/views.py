@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 #from requests import get
-from .forms import ContactForm
+from .forms import ContactForm, SubscribtionForm
 from .models import Blogs, Category, Jobs, Products, ProductCategory
 
 # Create your views here.
@@ -8,14 +8,14 @@ from .models import Blogs, Category, Jobs, Products, ProductCategory
 
 def landing(request):
     if request.method == "POST":
-        form = ContactForm(request.POST)
+        form = SubscribtionForm(request.POST)
         print(form)
         if form.is_valid():
             print(form)
             form.save()
             return redirect("landing")
 
-    form = ContactForm()
+    form = SubscribtionForm()
     blogs = Blogs.objects.all()[:6]
 
     return render(request, "landing.html", context={"form": form, "blogs": blogs})
@@ -80,3 +80,11 @@ def blogs(request):
 def blogs_detail(request, id):
     blog = get_object_or_404(Blogs, id=id)
     return render(request, "single-blog.html", {"blog": blog})
+
+
+def privacy_policy(request):
+    return render(request, "privacy-policy.html")
+
+
+def terms_conditions(request):
+    return render(request, 'terms-conditions.html')

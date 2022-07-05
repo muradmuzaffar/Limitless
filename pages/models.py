@@ -17,6 +17,13 @@ class Contact(models.Model):
         return self.first_name
 
 
+class Subscribtion(models.Model):
+    email = models.EmailField(max_length=100)
+
+    def __str__(self):
+        return self.email
+
+
 class Category(models.Model):
     name = models.CharField(max_length=50, null=True)
     slug = models.SlugField(max_length=50, null=True, unique=True)

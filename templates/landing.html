@@ -89,10 +89,15 @@
       <p id="newsletter-p" class="text-wrap gilroy-medium" style="max-width: 500px;">Fəaliyyətimiz daha yaxından üçün bizi sosial şəbəkələrdən izləyin və e-mail vasitəsilə xəbərlərimizə abunə olun💙</p>
     </div>
 
-    <form id="landing-search" class="d-flex align-items-center ms-md-auto">
-      <input type="email" id="gilroy-medium" placeholder="e-poçt ünvanınızı qeyd edin" style="overflow: hidden;">
-      <button class="btn btn-primary text-light" type="button">Abunə ol</button>
+    <form method="post"  id="landing-search" class="d-flex align-items-center ms-md-auto">
+      {% csrf_token %}
+      {{form.email}}
+
+      <!-- <input type="email" id="gilroy-medium" placeholder="e-poçt ünvanınızı qeyd edin" style="overflow: hidden;"> -->
+      <button class="btn btn-primary text-light" type="submit">Abunə ol</button>
     </form>
+
+    
   </div>
 
 </section>

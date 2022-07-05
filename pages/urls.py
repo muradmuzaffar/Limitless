@@ -17,5 +17,8 @@ urlpatterns = [
     path('<slug:category_slug>/',
          store_by_category, name='store_by_category'),
 
+    path('privacy-policy', privacy_policy, name='privacy-policy'),
+    path('terms-conditions', terms_conditions, name='terms-conditions'),
+
 
 ]

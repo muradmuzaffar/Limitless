@@ -8,30 +8,30 @@
       <div class="col-md-6">
           <!-- slider main -->
         <div class="slider_main mb-4">
-          <div class="slider-items ">
-              <img src="{{product.image1.url}}" width="70%" height="70%" class="mx-auto" alt="">
+          <div class="slider-items   d-flex justify-content-center align-items-center">
+              <img src="{{product.image1.url}}" width="70%" height="70%" class="m-auto" alt="">
           </div>
           {% if product.image2 %}
           <div class="slider-items">
-              <img src="{{product.image2.url}}" width="70%" height="70%" class="mx-auto" alt="">
+              <img src="{{product.image2.url}}" width="70%" height="70%" class="m-auto" alt="">
           </div>
           {% endif %}
 
           {% if product.image3 %}
-          <div class="slider-items">
-              <img src="{{product.image3.url}}" width="70%" height="70%" class="mx-auto" alt="">
+          <div class="slider-items  d-flex justify-content-center align-items-center">
+              <img src="{{product.image3.url}}" width="70%" height="70%" class="m-auto" alt="">
           </div>
           {% endif %}
 
           {% if product.image4 %}
-          <div class="slider-items">
-              <img src="{{product.image4.url}}" width="70%" height="70%" class="mx-auto" alt="">
+          <div class="slider-items  d-flex justify-content-center align-items-center">
+              <img src="{{product.image4.url}}" width="70%" height="70%" class="m-auto" alt="">
           </div>
           {% endif %}
 
           {% if product.image5 %}
-          <div class="slider-items">
-              <img src="{{product.image5.url}}" width="70%" height="70%" class="mx-auto" alt="">
+          <div class="slider-items  d-flex justify-content-center align-items-center">
+              <img src="{{product.image5.url}}" width="70%" height="70%" class="m-auto" alt="">
           </div>
           {% endif %}
           <!-- <div class="slider-items">
@@ -47,32 +47,32 @@
           <!-- slider nav -->
         <div class="slider_nav mb-4">
           <div class="slider-nav-items">
-              <img src="{{product.image1.url}}" width="100px" height="100px" alt="">
+              <img src="{{product.image1.url}}" width="100px" height="100px" style="object-fit: contain;" alt="">
           </div>
           {% if product.image2 %}
             <div class="slider-nav-items">
-                <img src="{{product.image2.url}}" width="100px" height="100px" alt="">
+                <img src="{{product.image2.url}}" width="100px" height="100px" style="object-fit: contain;" alt="">
             </div>
             
           {% endif %}
 
           {% if product.image3 %}
             <div class="slider-nav-items">
-                <img src="{{product.image3.url}}" width="100px" height="100px" alt="">
+                <img src="{{product.image3.url}}" width="100px" height="100px" style="object-fit: contain;" alt="">
             </div>
             
           {% endif %}
 
           {% if product.image4 %}
             <div class="slider-nav-items">
-                <img src="{{product.image4.url}}" width="100px" height="100px" alt="">
+                <img src="{{product.image4.url}}" width="100px" height="100px" style="object-fit: contain;" alt="">
             </div>
             
           {% endif %}
 
           {% if product.image5 %}
             <div class="slider-nav-items">
-                <img src="{{product.image5.url}}" width="100px" height="100px" alt="">
+                <img src="{{product.image5.url}}" width="100px" height="100px" style="object-fit: contain;" alt="">
             </div>
             
           {% endif %}
@@ -94,7 +94,7 @@
         <h3 class="gilroy text-primary">{{product.price}} AZN</h3>
         <h5 class="fs-6"><span style="color: #767777;">Ölçü:</span> {{product.size}}</h5>
         <h5 class="fs-6"><span style="color: #767777;">Rəng:</span> {{product.color}}</h5>
-        <p class="mt-5">{{product.about}}</p>
+        <p class="mt-5">{{product.about|linebreaks}}</p>
        </div>
   
     </div>

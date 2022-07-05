@@ -79,17 +79,68 @@ body {
 }
 .landing-h3 {
   color: #4e4f4f;
-  font-size: 4vw;
+  font-size: 3em;
 }
 .facts-head {
   font-size: 4vw;
   color: #D48B35;
 }
-.facts-p {
+.link-p {
   color: #767777;
-  font-size: 2vw;
+  font-size: 2em;
 }
-/* ABOUT CSS*/
+/* Landing Slider */
+.prev_arrow_l {
+  color: #767777;
+ 
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: -4%;
+  width: 50px;
+  height: 50px;
+  font-size: 5vw;
+  font-weight: 100;
+  z-index: 1;
+}
+.next_arrow_l{
+  color: #767777;
+ 
+  display: flex;
+  position: absolute;
+  top: 50%;
+  right: -5%;
+  width: 50px;
+  height: 50px;
+  font-size: 5vw;
+  font-weight: 100;
+  z-index: 1;
+ }
+ /* Landing newletter */
+ #newsletter-p {
+  font-size: 1.3em;
+ }
+ #landing-search input[type="email"] {
+  padding: 0.5em 1em 0.5em 1em;
+  border: 1px solid #fff;
+  color: #767777;
+  outline: none;
+  border-radius: 10px;
+  line-height: 10px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  font-size: 2vw;
+ }
+ #landing-search input[type="email"]::placeholder {
+  font-size: 0.9em;
+  }
+ #landing-search button {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  font-size: 2vw;
+
+ }
+                              /* ABOUT CSS*/
 .about1 {
   margin: 5% 0 0;
   max-height: 18rem;
@@ -134,6 +185,7 @@ body {
   border-radius: 30px;
   background: #53afbe;
   line-height: 10px;
+  outline: none;
 }
 #blog-search input[type="text"]::placeholder {
   color: #fff;
@@ -306,7 +358,7 @@ body {
   color: #fff;
   opacity: 0.8;
 }
-.filter-settings {
+/* .filter-settings {
   min-height: 120px; 
   position: absolute;
   top: 30%;
@@ -336,7 +388,7 @@ body {
   left: 180%;
   top: 30%;
   background-color: #e1dfdf;
-}
+} */
 .store-button {
   width: 0%;
   padding: 10px;
@@ -369,7 +421,7 @@ body {
   left: 0%;
   width: 50px;
   height: 50px;
-  font-size: 5vh;
+  font-size: 2vw;
   font-weight: 100;
   z-index: 1;
 }
@@ -384,7 +436,7 @@ body {
     right: 0%;
     width: 50px;
     height: 50px;
-    font-size: 5vh;
+    font-size: 2vw;
     font-weight: 100;
     z-index: 1;
  }
@@ -395,23 +447,48 @@ body {
 .slider-main {
   position: relative;
 }
+/* #landing-search input[type="email"] {
+  #landing-search button { */
                        /* MEDIA QUERY */
  @media only screen and (max-width: 576px) {
  /* Landing css */
- .landing-h3 {
-  font-size: 7vw;
+ .landing1 {
+  margin-top: 30px;
  }
-#section2-p {
-  font-size: vw;
+ .section2 {
+  text-align: center;
+  padding-bottom: 0;
+ }
+ .form-container{
+  margin: 0%;
+ }
+ .landing-h3 {
+  font-size: 8vw;
+ }
+ .link-p {
+   font-size: 1em;
+ }
+ #landing-search input[type="email"] {
+  margin-top: 30px;
+  font-size: 4vw;
 }
+#landing-search button {
+  margin-top: 30px;
+  font-size: 3vw;
+  width: 95px;
+}
+#newsletter-p {
+  font-size: 1em; 
+}
+
  /* Store Single css */
 .next_arrow {  
-    font-size: 3vh;
+  visibility: hidden;
     width: 40px;
     height: 40px;
  }
 .prev_arrow {
-      font-size: 3vh;
+  visibility: hidden;
       width: 40px;
       height: 40px;
     }
@@ -447,6 +524,21 @@ body {
 
 
 @media only screen and (min-width: 576px) and (max-width: 768px) {
+  /* Landing css */
+  .link-p {
+    font-size: 1em;
+  }
+  #landing-search input[type="email"] {
+    margin-top: 30px;
+    font-size: 3vw;
+  }
+  #landing-search button {
+    margin-top: 30px;
+    font-size: 3vw;
+  }
+  #newsletter-p {
+    font-size: 1.2em; 
+  }
   /* SINGLE BLOG */
  .blog-body {
   width: 100%;
@@ -465,6 +557,12 @@ body {
 /* #store-search {
   width: 60%;
 } */
+.next_arrow {
+  visibility: hidden;
+}
+.prev_arrow {
+  visibility: hidden;
+}
  .store-button {
   right: 15%;
  }
@@ -476,14 +574,27 @@ body {
 }
 }
 @media only screen and (min-width: 768px) and (max-width: 992px){
+  /* Landing css */
+  .link-p {
+    font-size: 1em;
+  }
+  #landing-search input[type="email"] {
+
+  }
+  #landing-search button {
+    width: 6em;
+  }
+  #newsletter-p {
+    font-size: 1em;
+  }
  /* Store Single css */
   .next_arrow {  
-  font-size: 3vh;
+  
   width: 40px;
   height: 40px;
   }
   .prev_arrow {
-    font-size: 3vh;
+    
     width: 40px;
     height: 40px;
   }
@@ -506,6 +617,17 @@ body {
 /* Store css */
 .filter-settings {
   top: 50%;
+}
+/* Landing css */
+#landing-search input[type="email"] {
+  line-height: 9px;
+}
+.link-p {
+  font-size: 1.5em;
+}
+#landing-search button {
+  font-size: 1.6  vw;
+  word-wrap: break-word;
 }
 }
 @media only screen and (min-width: 1200px) and (max-width: 1400px){

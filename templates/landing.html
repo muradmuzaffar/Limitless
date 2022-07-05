@@ -5,22 +5,22 @@
   
 
 <!-- Section 1 -->
-<section class="section2 gilroy-medium d-sm-flex">
+<section class="section2 gilroy d-sm-flex">
   <!-- Yazi hissesi -->
   <div class="form-container">
    <h3 class="landing-h3">Limitlərini</h3>
    <h3 class="landing-h3">aradan qaldır!</h3>
-    <p id="section2-p">İnklüziv cəmiyyətin bir parçası olmaq istəyirsənsə,</p>
+    <!-- <p id="section2-p">İnklüziv cəmiyyətin bir parçası olmaq istəyirsənsə,</p>
 
     <button class="btn btn-lg button-cyan">
       Daxil ol
-    </button>
+    </button> -->
   </div>
   <!-- Sekil-community -->
-  <img src="{%static 'images/landing1.svg'%}" width="45%" height="45%" alt="community" class="mx-auto d-none d-sm-block">
+  <img src="{%static 'images/landing1.svg'%}" width="44%" height="44%" alt="community" class="landing1 mx-auto">
 </section>
 <!-- Section 2 -->
-<div class="container d-none d-sm-block">
+<div class="container-md d-none d-sm-block">
   <div class="row">
     <div class="col-md-4">
     <h3 class="gilroy-medium facts-head text-center">620 min</h3>
@@ -37,34 +37,34 @@
   </div>
 </div>
 <!-- Section 3 -->
-<section class="my-5 py-5 container d-sm-flex align-items-center">
+<section class="my-5 py-5 container-md d-sm-flex align-items-center">
   <img src="{%static 'images/landing2.svg'%}" width="30%" height="30%" alt="community" class="d-none d-sm-block">
   <div class="mx-5">
-    <h3 class="landing-h3 text-end gilroy-medium">Lorem Ipsum</h3>
-     <p class="facts-p gilroy-medium text-end">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in sodales enim, ac ultricies turpis.</p>
-     <a href="{%url 'store'%}" class="nav-link text-end gilroy-medium fs-4"><i class="fa-solid fa-arrow-left me-3" style="font-size: 1.5vw;"></i><span style="color: rgb(169, 169, 169); font-size: 1.5vw;" >Mağazaya Keçid Et</span></a>
+    <h3 class="landing-h3 text-end gilroy-medium">Mağaza</h3>
+     <p class="link-p gilroy-medium text-end">İnklüziv ləvazimatlar, geyimlər və əlilliyə sahib şəxslərin hazırladığı əl işləri ilə tanış olmaq üçün</p>
+     <a href="{%url 'store'%}" class="nav-link text-end gilroy-medium fs-4"><i class="fa-solid fa-arrow-left me-3" style="font-size: 0.8em;"></i><span style="color: rgb(169, 169, 169); font-size: 0.8em;" >Mağazaya Keçid Et</span></a>
    </div>
 </section>
 <!-- Section 4 -->
-<section class="my-5 py-5 container d-sm-flex align-items-center">
+<section class="my-5 py-5 container-md d-sm-flex align-items-center">
   <div class="mx-5">
-    <h3 class="landing-h3 text-start gilroy-medium">Lorem Ipsum</h3>
-    <p class="facts-p gilroy-medium text-start">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in sodales enim, ac ultricies turpis.</p>
-    <a href="{%url 'job-posting'%}" class="nav-link text-start gilroy-medium fs-4"><span style="color: rgb(169, 169, 169); font-size: 1.5vw;">İş elanına keçid et</span><i class="fa-solid fa-arrow-right ms-3" style="font-size: 1.5vw;"></i></a>
+    <h3 class="landing-h3 text-start gilroy-medium">İş elanları</h3>
+    <p class="link-p gilroy-medium text-start">Əlilliyə sahib şəxslərə uyğun vakansiyalarla tanış olmaq üçün</p>
+    <a href="{%url 'job-posting'%}" class="nav-link text-start gilroy-medium fs-4"><span style="color: rgb(169, 169, 169); font-size: 0.8em;">İş elanına keçid et</span><i class="fa-solid fa-arrow-right ms-3" style="font-size: 0.8em;"></i></a>
   </div>
   <img src="{%static 'images/landing3.svg'%}" width="30%" height="30%" alt="community" class="d-none d-sm-block">
 </section>
 <!-- Section 5 -->
-<section class="container">
+<section class="container-md">
   <h3 class="landing-h3 text-start gilroy-medium mx-5">Bloqlar</h3>
 
-  <div class="landing_slider">
+  <div class="landing_slider mt-5 mx-auto">
 
     {% for blog in blogs  %}
-    <div class="slider-item">
+    <div class="slider-item justify-content-center d-flex">
       <div class="card" style="width: 18rem;">
         <img src="{{blog.image.url}}" class="card-img-top mx-auto" style="width:100%; height: 250px; object-fit: contain;" alt="...">
-        <div class="card-img-overlay" style="margin: 65% 0 0 5%; height: 200px;">
+        <div class="card-img-overlay" style="margin: 60% 0 0 5%; height: 200px;">
           <div class="badge gilroy bg-primary py-2 px-3 text-wrap" style="border-radius: 10px; ">{{blog.category}}</div>
         </div>
         <div class="card-body">
@@ -78,17 +78,24 @@
       
     {% endfor %}
            
-          
-           
-             
-              
-                
-              
-
   </div>
   
 </section>
+<!-- Section 6 -->
+<section class="p-5 mb-5" style="background-color: #d8d8d81e; margin-top: 100px;">   
+  <div class="container-md d-md-flex">
+    <div>
+      <h3 class="landing-h3 gilroy-medium text-nowrap">Abunə ol</h3>
+      <p id="newsletter-p" class="text-wrap gilroy-medium" style="max-width: 500px;">Fəaliyyətimiz daha yaxından üçün bizi sosial şəbəkələrdən izləyin və e-mail vasitəsilə xəbərlərimizə abunə olun💙</p>
+    </div>
 
+    <form id="landing-search" class="d-flex align-items-center ms-md-auto">
+      <input type="email" id="gilroy-medium" placeholder="e-poçt ünvanınızı qeyd edin" style="overflow: hidden;">
+      <button class="btn btn-primary text-light" type="button">Abunə ol</button>
+    </form>
+  </div>
+
+</section>
 
 
 

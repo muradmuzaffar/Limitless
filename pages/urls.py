@@ -19,6 +19,7 @@ urlpatterns = [
 
     path('privacy-policy', privacy_policy, name='privacy-policy'),
     path('terms-conditions', terms_conditions, name='terms-conditions'),
+    path('contact', contact, name='contact'),
 
 
 ]

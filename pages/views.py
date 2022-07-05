@@ -88,3 +88,7 @@ def privacy_policy(request):
 
 def terms_conditions(request):
     return render(request, 'terms-conditions.html')
+
+
+def contact(request):
+    return render(request, 'contact.html')

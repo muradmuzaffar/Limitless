@@ -86,7 +86,7 @@ COLOR_CHOICES = [
     ("Qırmızı", ("Qırmızı")),
     ("Sarı", ("Sarı")),
     ("Bənövşəyi", ("Bənövşəyi")),
-    ("Qarışıq", ("Qarışıq")),
+    ("Digər", ("Digər")),
 
 
 ]

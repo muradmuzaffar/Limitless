@@ -15,7 +15,7 @@
           <a class="nav-link text-light" aria-current="page" href="#">Bütün bloqlar</a>
           
          <!-- search bar -->
-        <form id="blog-search"  class="ms-auto">
+        <form id="blog-search"  class="ms-sm-auto d-flex justify-content-center align-items-center">
             <input type="text" placeholder="Axtar" name="q" style="overflow: hidden;" class="text-wrap">
             <button type="submit"><i class="bi bi-search"></i></button>
         </form>
@@ -28,18 +28,21 @@
              <!-- blog 1 -->
              {% for blog in blogs  %}
              <div class="col-md-6 col-lg-4">
-                 <div class="card blog-col">
-                     <img src="{{blog.image.url}}" style="width: 100%; height: 250px; object-fit: contain;" class="card-img-top mx-auto " alt="...">
-                     <div class="card-body">
-                       <h5 class="card-title card-title-blog gilroy">{{blog.name}}</h5>
-                       <p class="card-text">
-                          {{blog.describtion | truncatechars:150}}</p>
-                       <a href="{%url 'blogs_detail' blog.id %}" class="btn btn-primary button-cyan">Daha çox</a>
-                       <div class="d-flex mb-5"> 
-                        <h6 class="b-circle b-footer-item gilroy"><i class="fa-regular fa-circle mx-1"></i>{{blog.user.username}}</h6>
-                        <h6 class="b-layers b-footer-item gilroy"><i class="bi bi-layers mx-1"></i>{{blog.category}}</h6>
-                        <h6 class="b-calendar b-footer-item gilroy text-end text-nowrap"><i class="bi bi-calendar-week mx-1"></i>{{blog.created_date}}</h6>
-                      </div>
+                 <div class="card blog-col" style="height: 480px;">
+                     <img src="{{blog.image.url}}" style="width: 100%; height: 250px; object-fit: contain;" class="card-img-top mx-auto" alt="...">
+                     <div class="ms-2 my-auto">
+                        
+                           <h5 class="card-title card-title-blog gilroy">{{blog.name}}</h5>
+                           <p class="card-text">
+                              {{blog.describtion | truncatechars:100}}</p>
+                           <a href="{%url 'blogs_detail' blog.id %}" class="btn btn-primary button-cyan">Daha çox</a>
+                           <div class="d-flex"> 
+                            <h6 class="b-circle b-footer-item gilroy"><i class="fa-regular fa-circle mx-1"></i>{{blog.user.username}}</h6>
+                            <h6 class="b-layers b-footer-item gilroy"><i class="bi bi-layers mx-1"></i>{{blog.category}}</h6>
+                            <h6 class="b-calendar b-footer-item gilroy text-end text-nowrap"><i class="bi bi-calendar-week mx-1"></i>{{blog.created_date}}</h6>
+                          
+
+                     </div>
                      </div>
                    </div>
              </div>

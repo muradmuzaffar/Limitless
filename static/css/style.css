@@ -92,7 +92,7 @@ body {
 /* Landing Slider */
 .prev_arrow_l {
   color: #767777;
- 
+  cursor: pointer;
   display: flex;
   position: absolute;
   top: 50%;
@@ -103,9 +103,12 @@ body {
   font-weight: 100;
   z-index: 1;
 }
+.prev_arrow_l:hover {
+  color: #53afbe;
+}
 .next_arrow_l{
   color: #767777;
- 
+  cursor: pointer;
   display: flex;
   position: absolute;
   top: 50%;
@@ -115,6 +118,9 @@ body {
   font-size: 5vw;
   font-weight: 100;
   z-index: 1;
+ }
+ .next_arrow_l:hover {
+  color: #53afbe;
  }
  /* Landing newletter */
  #newsletter-p {
@@ -175,6 +181,11 @@ body {
   border-right: 1px #fff solid;
   height: 20px;
   margin-right: 1em;
+}
+#blog-search::before {
+  content: "  ";
+  width: 30px;
+  height: 50px;
 }
 #blog-search input[type="text"] {
   padding: 0.5em 4em 0.5em 1em;
@@ -284,7 +295,6 @@ body {
   content: "  ";
   width: 30px;
   height: 50px;
-  
 }
 #job-search input[type="text"] {
   padding: 0 4em 0 1em;
@@ -340,7 +350,11 @@ body {
 }
 #store-search {
   width: 50%;
-  text-align: right;
+}
+#store-search::before {
+  content: "  ";
+  width: 30px;
+  height: 50px;
 }
 #store-search input[type="text"] {
   padding: 0.5em 4em 0.5em 1em;
@@ -554,6 +568,9 @@ body {
       height: 40px;
     }
 /* Store css */
+#store-nav {
+  justify-content: center;
+}
 #store-search {
   width: 70%; 
 }
@@ -577,14 +594,14 @@ body {
 .page-start {
   font-size: 1.7em;
 }
-#blog-search {
+/* #blog-search {
   margin-right: 2%;
  
-}
+} */
  }
 
 
-@media only screen and (min-width: 576px) and (max-width: 768px) {
+@media only screen and (min-width: 576px) and (max-width: 767px) {
   /* Landing css */
   .link-p {
     font-size: 1em;

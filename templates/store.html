@@ -3,7 +3,7 @@
 {%load static%}
 <!-- nav bar -->
 <section class="bg-primary">
-    <nav class="nav container-md d-flex py-2 align-items-center">
+    <nav class="nav container-md d-flex py-2 align-items-center" id="store-nav">
         <!-- menu items -->
         {% for category in categories  %}
           
@@ -14,7 +14,7 @@
         {% endfor %}
 
         <!-- search bar -->
-        <form id="store-search" class="">
+        <form id="store-search" class="d-flex justify-content-center align-items-center">
           <!-- Filter -->
           
             <!-- <button class="btn dropdown" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFilter" aria-expanded="false" aria-controls="collapseFilter">

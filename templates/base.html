@@ -18,7 +18,7 @@
 <body>
 <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-light">
-      <div class="container-lg">
+      <div class="container-xl">
         <!-- Logo -->
         <a href="{%url 'landing'%}" class="navbar-brand">
           <img src="{%static 'images/limitless_logo-01 4.svg'%}" alt="" width="100%" height="100%">
@@ -30,20 +30,20 @@
 
         <!-- nav items -->
        <div class="collapse navbar-collapse" id="navmenu">
-           <ul class="navbar-nav ms-auto">
-               <li class="nav-item">
+           <ul class="navbar-nav ms-auto ">
+               <li class="nav-item" style="max-width: 50px;">
                    <a href="{%url 'store'%}" class="nav-link text-dark">Mağaza</a>
                </li>
-               <li class="nav-item">
+               <li class="nav-item" style="max-width: 50px;">
                    <a href="{%url 'blogs'%}" class="nav-link text-dark">Bloqlar</a>
                </li>
-               <li class="nav-item">
+               <li class="nav-item" style="max-width: 50px;">
                    <a href="{%url 'job-posting'%}" class="nav-link text-dark text-nowrap">İş elanları</a>
                </li>
-               <li class="nav-item">
+               <li class="nav-item" style="max-width: 50px;">
                 <a href="{%url 'about'%}" class="nav-link text-dark">Haqqımızda</a>
                </li>
-               <li class="nav-item">
+               <li class="nav-item" style="max-width: 50px;">
                 <a href="{%url 'contact'%}" class="nav-link text-dark">Əlaqə</a>
                </li>
                
@@ -80,7 +80,7 @@
         <!-- col 3 -->
         <ul class="footer-list col-md-2">
           <li><a href="{%url 'about'%}" class="flink">Haqqımızda</a></li>
-          <li><a href="#" class="flink">Daxil ol</a></li>
+          <li><a href="{%url 'contact'%}" class="flink">Əlaqə</a></li>
         </ul>
         <!-- col 4 -->
         <ul class="footer-list col-md-2">

@@ -450,7 +450,6 @@ body {
                                        /* Contacts */
 #contact input[type="text"],
 #contact input[type="email"],
-#contact select,
 #contact textarea {
   border: 1px solid #53afbe;
   border-radius: 30px;
@@ -484,12 +483,13 @@ body {
 #contact {
   margin-top: 72px;
 }
-
+.contact-h3 {
+  color: #4e4f4f;
+  font-size: 3em;
+}
 .kompluqaqas {
   margin: 70px 0 0;
 }
-/* #landing-search input[type="email"] {
-  #landing-search button { */
                        /* MEDIA QUERY */
  @media only screen and (max-width: 576px) {
  /* Landing css */
@@ -521,6 +521,26 @@ body {
 #newsletter-p {
   font-size: 1em; 
 }
+/*Contact css  */
+#contact input[type="text"],
+#contact input[type="email"],
+#contact textarea {
+  width: 80%;
+ }
+ #contact {
+  margin-left: 15%;
+ }
+ .section-form {
+  justify-content: center;
+ }
+ .form-container{
+  margin: 0;
+ }
+ 
+ .contact-h3 {
+  font-size: 2.5em;
+  text-align: center;
+ }
 
  /* Store Single css */
 .next_arrow {  
@@ -540,13 +560,6 @@ body {
 .store-button {
    right: 15%;
  }
- .dropdown {
-  left: 8%;
- }
- .filter-settings {
-  top: 75%;
-  left: 20%;
-}
 /* Job postings css */
 #job-search button {
   right: 15%;
@@ -587,6 +600,24 @@ body {
   #newsletter-p {
     font-size: 1.2em; 
   }
+  /*Contact css  */
+  #contact input[type="text"],
+#contact input[type="email"],
+#contact textarea {
+  width: 80%;
+ }
+ .section-form {
+  justify-content: center;
+ }
+ .form-container{
+  margin: 0;
+ }
+ #contact{
+  margin-left: 15%;
+ }
+ .contact-h3 {
+  text-align: center;
+ }
   /* SINGLE BLOG */
  .blog-body {
   width: 100%;
@@ -602,24 +633,15 @@ body {
   width: 60vw;
 }
 /* Store css */
-/* #store-search {
-  width: 60%;
-} */
 .next_arrow {
   visibility: hidden;
 }
 .prev_arrow {
   visibility: hidden;
 }
- .store-button {
+.store-button {
   right: 15%;
  }
- .dropdown {
-  left: 10%;
- }
- .filter-settings {
-  top: 60%;
-}
 }
 @media only screen and (min-width: 768px) and (max-width: 992px){
   /* Landing css */
@@ -632,6 +654,13 @@ body {
   #newsletter-p {
     font-size: 1em;
   }
+ /*Contact css  */
+ #contact input[type="text"] {
+  width: 99%;
+ }
+ .kompluqaqas {
+  margin: auto 0;
+ }
  /* Store Single css */
   .next_arrow {  
   
@@ -657,6 +686,9 @@ body {
 #job-search button {
   right: 12%;
 }
+.job-div{
+  width: 60vw;
+}
 }
 @media only screen and (min-width: 992px) and (max-width: 1200px){
 /* Store css */
@@ -673,6 +705,11 @@ body {
 #landing-search button {
   font-size: 1.6  vw;
   word-wrap: break-word;
+}
+/*Contact form */
+.kompluqaqas {
+  width: 43%;
+  margin-top: auto;
 }
 }
 

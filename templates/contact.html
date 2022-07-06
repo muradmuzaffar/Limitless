@@ -4,7 +4,7 @@
 -<section class="section-form pb-5  d-flex">
     <!-- Contact form -->
 <div class="form-container">
-<h3 class="gilroy landing-h3">Bizimlə əlaqə yarat.</h3>
+<h3 class="gilroy contact-h3">Bizimlə əlaqə yarat.</h3>
 <form id="contact" method="POST">
 {% csrf_token %}
 <!-- Ad -->
@@ -30,6 +30,6 @@
 </div>
  <!-- Kompluqaqas -->
 
- <img src="{%static 'images/kompluqaqas.png'%}" width="50%" height="50%" alt="" class="ms-auto my-auto kompluqaqas">
+ <img src="{%static 'images/kompluqaqas.png'%}" width="50%" height="50%" alt="" class="ms-auto kompluqaqas d-none d-md-block">
  </section>
 {% endblock body %}

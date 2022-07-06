@@ -10,12 +10,12 @@
 </section>
 <!-- Job posting nav -->
 <section class="bg-primary">
-    <nav class="nav container d-flex pb-2 pt-2 align-items-center">
+    <nav class="nav container d-flex py-2 align-items-center">
         <!-- menu items -->
-        <form id="job-search" class="mx-auto d-flex justify-content-center">
-            <input type="text" placeholder="Axtar" name="q" style="overflow: hidden;" class="text-wrap">
+        <form id="job-search" class="mx-auto d-flex justify-content-center align-items-center">
+            <input type="text" placeholder="Axtar" name="q" style="overflow: hidden; height: 40px;" class="text-wrap">
             <button type="submit" class="mt-1"><i class="bi bi-search"></i></button>
-        </form>
+        </form> 
       </nav>
 </section>
 <!-- Job posts -->
@@ -39,7 +39,7 @@
                    </div>
                    <div class=" card-body d-flex mb-3 ms-3 justify-content-between" style="padding: 0;">
                     <h6 class="card-text ms-2"><small class="text-muted gilroy"> {{job.company}}</small></h6>
-                    <h6 class="card-text me-3 text-end"><small class="text-muted gilroy"><i class="bi bi-geo-alt-fill me-2"></i>{{job.location}}</small></h6>
+                    <p class="card-text me-3 text-end fs-6" style="max-width: 200px;"><small class="text-muted gilroy" style="width: 50px;"><i class="bi bi-geo-alt-fill me-2"></i>{{job.location}}</small></p>
                    </div>
                  </div>
                  <div class="col-md-3 d-flex align-items-center justify-content-center">

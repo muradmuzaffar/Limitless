@@ -4,16 +4,16 @@ from django import forms
 
 class ContactForm(forms.ModelForm):
     first_name = forms.CharField(widget=forms.TextInput(attrs={
-        'placeholder': 'Your Name'
+        'placeholder': 'Ad'
     }))
     last_name = forms.CharField(widget=forms.TextInput(attrs={
-        'placeholder': 'Your Surname'
+        'placeholder': 'Soyad'
     }))
     email = forms.EmailField(widget=forms.EmailInput(attrs={
-        'placeholder': 'Your Email'
+        'placeholder': 'Email'
     }))
     message = forms.CharField(widget=forms.Textarea(attrs={
-        'placeholder': 'Your Message'
+        'placeholder': 'Müraciətin mətni'
     }))
 
     class Meta:

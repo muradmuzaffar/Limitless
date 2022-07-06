@@ -91,4 +91,13 @@ def terms_conditions(request):
 
 
 def contact(request):
-    return render(request, 'contact.html')
+    if request.method == "POST":
+        form = ContactForm(request.POST)
+        print(form)
+        if form.is_valid():
+            form.save()
+            return redirect("landing")
+
+    form = ContactForm()
+
+    return render(request, 'contact.html', context={"form": form})

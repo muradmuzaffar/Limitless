@@ -75,23 +75,21 @@ SIZE_CHOICES = [
     ("X", ("X")),
     ("M", ("M")),
     ("XL", ("XL")),
+    ("Yoxdur", ("Yoxdur")),
 
 ]
 
 COLOR_CHOICES = [
-    ("RED", ("RED")),
-    ("BLUE", ("BLUE")),
-    ("BLACK", ("BLACK")),
+    ("Ağ", ("Ağ")),
+    ("Qara", ("Qara")),
+    ("Mavi", ("Mavi")),
+    ("Qırmızı", ("Qırmızı")),
+    ("Sarı", ("Sarı")),
+    ("Bənövşəyi", ("Bənövşəyi")),
+    ("Qarışıq", ("Qarışıq")),
+
 
 ]
-
-
-# CATEGORY_CHOICES = [
-#     ("Erqonomik", ("Erqonomik")),
-#     ("Handmade", ("Handmade")),
-
-
-# ]
 
 
 class ProductCategory(models.Model):
@@ -104,7 +102,7 @@ class ProductCategory(models.Model):
 
 class Products(models.Model):
     name = models.CharField(max_length=50)
-    price = models.IntegerField()
+    price = models.FloatField(blank=True, null=True)
     size = models.CharField(max_length=50, choices=SIZE_CHOICES)
     color = models.CharField(max_length=50, choices=COLOR_CHOICES)
     about = models.TextField()

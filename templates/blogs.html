@@ -33,7 +33,7 @@
                      <div class="card-body">
                        <h5 class="card-title card-title-blog gilroy">{{blog.name}}</h5>
                        <p class="card-text">
-                           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla imperdiet metus vel urna dictum, quis viverra felis pretium.</p>
+                          {{blog.describtion | truncatechars:150}}</p>
                        <a href="{%url 'blogs_detail' blog.id %}" class="btn btn-primary button-cyan">Daha çox</a>
                        <div class="d-flex mb-5"> 
                         <h6 class="b-circle b-footer-item gilroy"><i class="fa-regular fa-circle mx-1"></i>{{blog.user.username}}</h6>

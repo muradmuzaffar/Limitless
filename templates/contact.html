@@ -1,6 +1,35 @@
 {% extends "base.html" %}
 {% block body %}
 {%load static%}
+-<section class="section-form pb-5  d-flex">
+    <!-- Contact form -->
+<div class="form-container">
+<h3 class="gilroy landing-h3">Bizimlə əlaqə yarat.</h3>
+<form id="contact" method="POST">
+{% csrf_token %}
+<!-- Ad -->
+<input type="text" id="fname" name="firstname" placeholder="Ad">
+{{form.first_name}}
+<!-- Soyad -->
+<input type="text" id="lname" name="lastname" placeholder="Soyad">
+{{form.last_name}}
+<br>
+<!-- Email -->
+<input type="email" id="email" name="email" placeholder="Email">
+{{form.email}}         
+<br>
+<!-- Muracit Metni -->
+<textarea id="subject" name="subject" placeholder="Müraciətin mətni..."  ></textarea>
+{{form.message}}
 
 
+<br>
+<!--Gonder-->
+<input type="submit" value="Göndər" class="btn">
+</form>
+</div>
+ <!-- Kompluqaqas -->
+
+ <img src="{%static 'images/kompluqaqas.png'%}" width="50%" height="50%" alt="" class="ms-auto my-auto kompluqaqas">
+ </section>
 {% endblock body %}

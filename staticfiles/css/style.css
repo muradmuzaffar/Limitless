@@ -610,6 +610,9 @@ body {
     margin-top: 30px;
     font-size: 3vw;
   }
+  .landing-h3 {
+    font-size: 2.7em;
+  }
   #landing-search button {
     margin-top: 30px;
     font-size: 3vw;
@@ -618,7 +621,7 @@ body {
     font-size: 1.2em; 
   }
   /*Contact css  */
-  #contact input[type="text"],
+#contact input[type="text"],
 #contact input[type="email"],
 #contact textarea {
   width: 80%;
@@ -627,7 +630,7 @@ body {
   justify-content: center;
  }
  .form-container{
-  margin: 0;
+  margin-left: 3%;
  }
  #contact{
   margin-left: 15%;

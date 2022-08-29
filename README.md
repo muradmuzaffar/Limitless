@@ -1,6 +1,5 @@
 # Limitless
 
-## İnkluziv cəmiyyətdə görüşmək ümidi ilə!
 
 
 

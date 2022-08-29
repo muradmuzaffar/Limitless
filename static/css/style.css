@@ -180,7 +180,7 @@ body {
 .line-left {
   border-right: 1px #fff solid;
   height: 20px;
-  margin-right: 1em;
+  
 }
 #blog-search::before {
   content: "  ";

@@ -180,7 +180,6 @@ body {
 .line-left {
   border-right: 1px #fff solid;
   height: 20px;
-  
 }
 #blog-search::before {
   content: "  ";
@@ -305,6 +304,7 @@ body {
   border-radius: 30px;
   background: #53afbe;
   line-height: 10px;
+  outline: none;
   
 }
 #job-search input[type="text"]::placeholder {

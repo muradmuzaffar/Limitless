@@ -54,7 +54,7 @@
       {% for product in products  %}
       <div class="col-md-6 col-lg-4 d-flex justify-content-center ">
         <div class="card shadow" style="width: 357px; height: 379px;">
-          <img src="{{product.image1.url}}" style="width: 100%; height: 60%; object-fit: contain;" class="card-img-top mt-2" alt="...">
+          <img src="{{product.image1.url}}" style="width: 100%; height: 60%; object-fit: contain;" class="card-img-top" alt="...">
           <div class="card-body mt-4">
             <h5 class="card-title card-title-blog gilroy">{{product.name}}</h5>
             <a href="{%url 'store-single' id=product.id %}" class="btn btn-primary button-cyan">Daha çox</a>

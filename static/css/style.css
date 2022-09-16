@@ -11,19 +11,7 @@ body {
 .nav-link {
   font-size: large;
 }
-.button-orange {
-  background-color: #feb449;
-  border-radius: 30px;
-  justify-content: center;
-  padding: 0.3em 2em 0.3em 2em;
-  color: white;
-  margin-top: 5px;
-}
-.button-orange:hover {
-  background-color: whitesmoke;
-  color: #feb449;
-  border: 1px solid #feb449;
-}
+
 /* Footer CSS */
 .hr-uzun {
   width: 75%;
@@ -226,19 +214,7 @@ body {
  max-height: 497px;
  
 }
-.button-cyan {
-  background-color: #53afbe;
-  border-radius: 30px;
-  justify-content: center;
-  padding: 0.3em 2em 0.3em 2em;
-  color: white;
-  margin-top: 5px;
-}
-.button-cyan:hover {
-  background-color: whitesmoke;
-  color: #53afbe;
-  border: 1px solid #53afbe;
-}
+
 .card-title-blog {
   color: #4e4f4f;
 }
@@ -745,4 +721,30 @@ body {
 }
 pre {
   font-family: Arial, Helvetica, sans-serif;
+}
+.button-orange {
+  background-color: #feb449;
+  border-radius: 30px;
+  justify-content: center;
+  padding: 0.3em 2em 0.3em 2em;
+  color: white;
+  margin-top: 5px;
+}
+.button-orange:hover {
+  background-color: whitesmoke;
+  color: #feb449;
+  border: 1px solid #feb449;
+}
+.button-cyan {
+  background-color: #53afbe;
+  border-radius: 30px;
+  justify-content: center;
+  padding: 0.3em 2em 0.3em 2em;
+  color: white;
+  margin-top: 5px;
+}
+.button-cyan:hover {
+  background-color: whitesmoke;
+  color: #53afbe;
+  border: 1px solid #53afbe;
 }

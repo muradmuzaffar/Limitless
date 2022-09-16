@@ -29,7 +29,10 @@
              {% for blog in blogs  %}
              <div class="col-md-6 col-lg-4">
                  <div class="card blog-col" style="height: 480px;">
-                     <img src="{{blog.image.url}}" style="width: 100%; height: 250px; object-fit: contain;" class="card-img-top mx-auto" alt="...">
+                    <div class="bg-image" >
+                        <!-- style="background-image: url({{blog.image.url}}); background-size: 100% 100%;" -->
+                        <img src="{{blog.image.url}}" style="width: 100%; height: 250px; object-fit: fill;" class="card-img-top mx-auto" alt="...">
+                    </div>
                      <div class="ms-2 my-auto">
                         
                            <h5 class="card-title card-title-blog gilroy">{{blog.name}}</h5>
